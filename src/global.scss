@@ -1,6 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 $primary: rgba(37, 193, 243, 1);
 $secondary: rgba(254, 151, 0, 1);
+//text sizes and fonts--
+.discount{
+  font-weight:100;
+  text-decoration:line-through;
+}
+.lg-text {
+  font-size: 1.1em !important;
+}
+.heading {
+  font-size: 3em;
+  font-family: "Bebas Neue", cursive;
+}
+.md-text{
+  font-size:1em !important;
+}
+.sm-text{
+  font-size:0.9em !important;
+}
+.light{
+  font-weight: 100;
+}
+.bold{
+  font-weight: 700;
+}
+.sub-heading {
+  font-size: 2em;
+  font-family: "Bebas Neue", cursive;
+}
+//end of text sizes and fonts
+
+
+//colors---
 .primary-bg {
   background-color: $primary;
 }
@@ -13,14 +45,12 @@ $secondary: rgba(254, 151, 0, 1);
 .secondary-text {
   color: $secondary;
 }
-.heading {
-  font-size: 3em;
-  font-family: "Bebas Neue", cursive;
+//end of colors
+
+//icons--
+.bi-star-fill{
+  font-size:0.9rem !important;
+  color:$secondary;
 }
-.sub-heading {
-  font-size: 2em;
-  font-family: "Bebas Neue", cursive;
-}
-.text {
-  font-size: 1.2em;
-}
+//end of icons
+

@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RectanglebtnComponent } from './components/rectanglebtn/rectanglebtn.component';
+import { RectanglebtnComponent } from './components/buttons/rectanglebtn/rectanglebtn.component';
+import { CourseCardComponent } from './components/cards/course-card/course-card.component';
 
 @NgModule({
-  declarations: [RectanglebtnComponent],
+  declarations: [RectanglebtnComponent, CourseCardComponent],
   imports: [CommonModule],
-  exports: [RectanglebtnComponent],
+  exports: [RectanglebtnComponent,CourseCardComponent],
 })
 export class SharedModule {}

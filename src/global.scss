@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+$primary: rgba(37, 193, 243, 1);
+$secondary: rgba(254, 151, 0, 1);
+.primary-bg {
+  background-color: $primary;
+}
+.secondary-bg {
+  background-color: $secondary;
+}
+.primary-text {
+  color: $primary;
+}
+.secondary-text {
+  color: $secondary;
+}
+.heading {
+  font-size: 3em;
+  font-family: "Bebas Neue", cursive;
+}
+.sub-heading {
+  font-size: 2em;
+  font-family: "Bebas Neue", cursive;
+}
+.text {
+  font-size: 1.2em;
+}

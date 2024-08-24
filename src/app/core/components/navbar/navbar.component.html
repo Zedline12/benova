@@ -1,0 +1,90 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+  <!-- Container wrapper -->
+  <div style="padding: 15px 50px 15px 50px" class="container-fluid">
+    <!-- Navbar brand -->
+    <a class="navbar-brand me-2" href="https://mdbgo.com/">
+      <img
+        class="logo"
+        src="assets/images/benova_logo.png"
+        alt="MDB Logo"
+        loading="lazy"
+        style="margin-top: -1px"
+      />
+    </a>
+
+    <!-- Toggle button -->
+
+    <i
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarButtonsExample"
+      aria-controls="navbarButtonsExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      class="navbar-toggler bi bi-list"
+    ></i>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarButtonsExample">
+      <!-- Left links -->
+
+      <div
+        style="margin-left: 2%; width: 20%"
+        class="navbar-nav me-auto mb-2 mb-lg-0 form-group has-search"
+      >
+        <i class="bi bi-search form-control-feedback"></i>
+        <input
+          style="border-radius: 25px; padding: 10px 5px 10px 40px"
+          type="text"
+          class="form-control"
+          placeholder="Search Courses..."
+        />
+      </div>
+      <!-- Left links -->
+
+      <div class="list d-none d-md-flex align-items-center">
+        <a>Home</a>
+        <a>Browse Courses</a>
+        <a>About</a>
+        <a>Blog</a>
+        <a>Contact</a>
+        <a><i class="bi bi-cart"></i></a>
+        <a>
+          <rectangle-btn style="float: right" [color]="'secondary'" [size]="'medium'">
+            Login</rectangle-btn
+          >
+        </a>
+      </div>
+      <div class="list d-md-none">
+        <i
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#listcollapse"
+          aria-controls="collapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="bi bi-list"
+        ></i>
+        <div class="collapse navbar-collapse" id="listcollapse">
+          <div class="d-flex flex-column">
+            <a>Home</a>
+            <a>Browse Courses</a>
+            <a>About</a>
+            <a>Blog</a>
+            <a>Contact</a>
+          </div>
+        </div>
+        <a>
+          <rectangle-btn style="float: right" [color]="'secondary'">
+            Login</rectangle-btn
+          >
+        </a>
+        <a style="float: right"><i class="bi bi-cart"></i></a>
+      </div>
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->

@@ -1,0 +1,22 @@
+<button
+  class="rectanglebtn"
+  [attr.type]="type"
+  [ngClass]="{
+    'primary-bg': color === 'primary',
+    'secondary-bg': color === 'secondary',
+    'btn-loading': loading,
+    'medium': size === 'medium',
+    'small': size === 'small',
+    'large': size === 'large',
+  }"
+  [disabled]="disabled || loading"
+  (click)="handleClick()"
+>
+  <ng-content></ng-content>
+  <span
+    *ngIf="loading"
+    class="spinner-border spinner-border-sm"
+    role="status"
+    aria-hidden="true"
+  ></span>
+</button>

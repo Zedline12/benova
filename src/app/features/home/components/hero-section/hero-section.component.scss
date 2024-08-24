@@ -1,0 +1,50 @@
+.hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 119, 181, 0.8) 30%,
+      rgba(0, 119, 181, 0.3)
+    ),
+    url("/assets/images/hero.png");
+  height: 35em;
+}
+
+form {
+  /* This bit sets up the horizontal layout */
+  display: flex;
+  flex-direction: row;
+  width: 72%;
+  /* This bit draws the box around it */
+  border: 1px solid grey;
+
+  /* I've used padding so you can see the edges of the elements. */
+  padding: 1px;
+}
+
+input {
+  /* Tell the input to use all the available space */
+  width: 100%;
+  height: 3em;
+  flex-grow: 2;
+  /* And hide the input's outline, so the form looks like the outline */
+  border: none;
+}
+
+/* remove the input focus blue box, it will be in the wrong place. */
+input:focus {
+  outline: none;
+}
+
+/* Add the focus effect to the form so it contains the button */
+form:focus-within {
+  outline: 1px solid blue;
+}
+
+button {
+  /* Just a little styling to make it pretty */
+  border: 1px solid blue;
+  background: blue;
+  color: white;
+}

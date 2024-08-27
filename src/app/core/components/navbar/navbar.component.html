@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav  class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
   <!-- Container wrapper -->
   <div style="padding: 15px 50px 15px 50px" class="container-fluid">
     <!-- Navbar brand -->
@@ -51,7 +51,11 @@
         <a>Contact</a>
         <a><i class="bi bi-cart"></i></a>
         <a>
-          <rectangle-btn style="float: right" [color]="'secondary'" [size]="'medium'">
+          <rectangle-btn
+            style="float: right"
+            [color]="'secondary'"
+            [size]="'medium'"
+          >
             Login</rectangle-btn
           >
         </a>
@@ -76,11 +80,18 @@
           </div>
         </div>
         <a>
-          <rectangle-btn style="float: right" [color]="'secondary'">
+          <rectangle-btn
+            style="float: right"
+            [size]="'large'"
+            [color]="'secondary'"
+            [style]="'width:5em;'"
+          >
             Login</rectangle-btn
           >
         </a>
-        <a style="float: right"><i class="bi bi-cart"></i></a>
+        <a class="cart" style="float: right; font-size: 1.5em !important"
+          ><i class="bi bi-cart"></i
+        ></a>
       </div>
     </div>
     <!-- Collapsible wrapper -->

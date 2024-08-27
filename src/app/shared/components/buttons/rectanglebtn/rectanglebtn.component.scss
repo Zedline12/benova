@@ -1,7 +1,7 @@
 .rectanglebtn {
   box-sizing: border-box;
   cursor: pointer;
-  border:none;
+  border: none;
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
     sans-serif;
@@ -19,12 +19,16 @@
   touch-action: manipulation;
   vertical-align: baseline;
   white-space: nowrap;
-  color:white;
+  color: white;
   font-weight: 600;
 }
-.medium{
-    padding:10px;
-    font-size:1.1em
+.medium {
+  padding: 10px 20px 10px 20px;
+  font-size: 1.1em;
+}
+.large {
+  width: 20em;
+  font-size: 1.8em !important;
 }
 
 .rectanglebtn:hover,

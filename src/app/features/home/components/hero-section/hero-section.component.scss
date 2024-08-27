@@ -1,3 +1,4 @@
+@import "./responsive.scss";
 .hero {
   background-size: cover;
   background-repeat: no-repeat;
@@ -8,7 +9,7 @@
       rgba(0, 119, 181, 0.3)
     ),
     url("/assets/images/hero.png");
-  height: 35em;
+  height: 30em;
 }
 
 form {

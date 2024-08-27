@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 $primary: rgba(37, 193, 243, 1);
 $secondary: rgba(254, 151, 0, 1);
+$link:#c0c4fc;
 //text sizes and fonts--
 .discount{
   font-weight:100;
@@ -45,10 +46,14 @@ $secondary: rgba(254, 151, 0, 1);
 .secondary-text {
   color: $secondary;
 }
+.link{
+  color:$link;
+  text-decoration: underline;
+}
 //end of colors
 
 //icons--
-.bi-star-fill{
+.bi-star-fill,.bi-star,.bi-star-half{
   font-size:0.9rem !important;
   color:$secondary;
 }

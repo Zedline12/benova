@@ -1,0 +1,33 @@
+@import "global";
+.details{
+    
+    padding:30px 50px 0px 120px;
+}
+*{
+    color:white;
+}
+.notes{
+    margin-bottom: 2em;
+}
+.ratings{
+    margin-top:2em;
+}
+.small-text h6{
+    font-size:0.9rem;
+}
+
+.links{
+    margin:0px 5px 0px 5px;
+    font-weight: 700;
+    font-size:0.9em;
+    color:$link;
+}
+.link{
+    font-size:0.9em;
+    font-weight: 700;
+}
+.course-title{
+    font-size:1.8em;
+    font-weight: 700;
+    max-width: 70%;
+}

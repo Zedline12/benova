@@ -4,6 +4,7 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 const home = () =>
   import('./features/home/home.module').then((m) => m.HomeModule);
 const courseDetails=()=>import("./features/course-details/course-details.module").then((m)=>m.CourseDetailsModule)
+const cart=()=>import("./features/cart/cart.module").then((m)=>m.CartModule)
 const routes: Routes = [
   {
     component: MainLayoutComponent,
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         loadChildren: home,
         path: '',
+      },
+      {
+       loadChildren:cart,
+       path:'cart'
       },
        {
         loadChildren:courseDetails,

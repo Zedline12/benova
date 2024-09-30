@@ -1,10 +1,27 @@
 <body-layout>
-    <div class="container-fluid mt-4 bold">
-        <div class="col-12 mb-4">
-            <h1 class="m-0">Shopping Cart</h1>
+  <div style="margin-top: 10em;"  class="container-fluid  bold">
+    @if(coursesService.getCartCoursesService().length) {
+    <div class="row d-flex justify-content-xxl-center justify-content-start">
+     
+      <div class="col-12 mb-4">
+        <h1 class="m-0">Shopping Cart</h1>
+      </div>
+     
+        <div class="col-xxl-8 order-xxl-0 order-1">
+          <items-list></items-list>
         </div>
-        <div class="col-8">
-            <items-list></items-list>
+        <div class="col-xxl-4 col-lg-6 order-xxl-1 order-0  ps-xxl-5 p-0 mb-xxl-0 mt-xxl-0 mt-2 mb-5">
+          <cart-summary></cart-summary>
         </div>
-    </div>
+      </div>
+      }
+      @else{
+        <div class="row d-flex align-items-end justify-content-center">
+          <div class="col-12 d-flex align-items-center justify-content-center">
+            <h1 class="text-center">Your cart is empty</h1>
+          </div>
+        </div>
+      }
+   
+  </div>
 </body-layout>

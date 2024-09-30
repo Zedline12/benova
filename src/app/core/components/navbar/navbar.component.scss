@@ -1,7 +1,29 @@
 @import "global";
+* :not(input, div) {
+  cursor: pointer;
+}
+*{
+  color:white;
+}
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
 
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: white;
+}
 .logo {
   width: 5em;
+}
+.form-control {
+  background-color: transparent;
+  border-radius: 25px;
+  padding: 10px 5px 10px 40px;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
 }
 ul {
   list-style-type: none; /* Remove bullets */
@@ -20,6 +42,7 @@ ul li {
 }
 .bi-cart3 {
   font-size: 1.5em;
+  color: black;
 }
 .bi-list {
   font-size: 1.3em;
@@ -120,3 +143,4 @@ input.nosubmit {
   pointer-events: none;
   color: #aaa;
 }
+

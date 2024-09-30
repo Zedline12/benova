@@ -1,0 +1,9 @@
+@import "global";
+.content-faded {
+  -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+  max-height: 40vh;
+}
+.description-readMore{
+    color:purple;
+    margin-top: 0.5em;
+}

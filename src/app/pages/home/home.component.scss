@@ -1,6 +1,13 @@
+@import "global";
+* {
+  color: white;
+}
 .cards-wrapper {
   display: flex;
   justify-content: center;
+}
+.card-text {
+  font-size: clamp(0.9rem, 1vw, 1rem) !important;
 }
 .card img {
   max-width: 100%;
@@ -24,6 +31,7 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
 @media (min-width: 768px) {
   .card img {
     height: 11em;

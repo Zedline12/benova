@@ -12,6 +12,9 @@ export class RectanglebtnComponent {
   @Input() disabled: boolean = false; // Disabled state
   @Input() loading: boolean = false; // Loading state
   @Input() style: string = '';
+  @Input() width: string = '';
+  @Input() height: string = '';
+  @Input() fontSize: string = "";
   @Output() btnclick = new EventEmitter<void>(); // Click event
 
   handleClick() {

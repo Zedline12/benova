@@ -5,8 +5,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 @NgModule({
-  declarations: [MainLayoutComponent,BodyLayoutComponent],
-  imports:[CommonModule,RouterModule,CoreModule],
-  exports:[MainLayoutComponent,BodyLayoutComponent]
+  declarations: [MainLayoutComponent, BodyLayoutComponent],
+  imports: [CommonModule, RouterModule, CoreModule],
+  exports: [MainLayoutComponent, BodyLayoutComponent],
 })
-export class LayoutsModule { }
+export class LayoutsModule {}

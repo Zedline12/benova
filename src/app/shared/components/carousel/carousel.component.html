@@ -1,0 +1,6 @@
+
+<owl-carousel-o [options]="customOptions">
+  <ng-template  *ngFor="let course of coursesService.courses$ | async" carouselSlide
+    ><course-card  class="d-flex justify-content-center" [courseId]="course._id"></course-card></ng-template
+  >
+</owl-carousel-o>

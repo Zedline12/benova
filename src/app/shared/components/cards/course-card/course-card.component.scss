@@ -1,8 +1,21 @@
+* {
+  color: white;
+}
 img {
   width: 100%;
 }
+.title {
+  font-size: clamp(0.9rem, 0.9vw, 1.2rem);
+}
+.price {
+  font-size: clamp(1.1rem, 1vw, 1.3rem);
+}
 .card {
   max-width: 15rem;
+  transition: 0.2s;
+}
+.card:hover {
+  background-color: whitesmoke;
 }
 .col-12 {
   padding: 0px !important;

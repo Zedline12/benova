@@ -1,18 +1,18 @@
 
-    <div style="border-style: none;" class="card row">
+    <div [routerLink]="['courses', currentCourse!._id]" style="cursor: pointer;border-style: none;background-color: transparent;" class="card row ">
         <div class="col-12">
-            <img src="assets/images/learn-python.jpeg"/>
+            <img src="{{currentCourse!.image}}"/>
         </div>
         <div class="col-12">
-            <h5 class="sm-text bold">Pyhton for Data Science and Machine Learning Bootcamp</h5>
+            <h5 class="title bold">{{currentCourse!.title}}</h5>
         </div>
         <div class="col-12">
-            <h6 style="font-size: 0.9em;" class="light">Jose Portilla,Pierian Training</h6>
+            <h6 style="font-size: 0.9em;" class="light">{{currentCourse!.author}}</h6>
         </div>
         <div class="col-12">
             <course-rating></course-rating>
         </div>
         <div class="col-12">
-            <h5 class="md-text bold">$299.99 <span class="discount ms-3">$340.80</span></h5>
+            <h5 class="price bold">${{currentCourse!.price}} <span *ngIf="currentCourse!.oldPrice" class="discount light ms-3">${{currentCourse!.oldPrice}}</span></h5>
         </div>
     </div>

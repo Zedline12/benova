@@ -1,11 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-$primary: rgba(37, 193, 243, 1);
-$secondary: rgba(254, 151, 0, 1);
-$link:#c0c4fc;
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+$primary: #26243c;
+$secondary: rgba(103, 58, 183, 0.8);
+$thirdary: #00c16e;
+$link: #c0c4fc;
 //text sizes and fonts--
-.discount{
-  font-weight:100;
-  text-decoration:line-through;
+.button {
+  background-color: $thirdary;
+  cursor: pointer;
+}
+.discount {
+  font-weight: 100;
+  text-decoration: line-through;
+}
+.price {
+  font-family: "Fjalla One", sans-serif;
+  color: #3b3b3b;
 }
 .lg-text {
   font-size: 1.7rem !important;
@@ -14,16 +24,16 @@ $link:#c0c4fc;
   font-size: 3em;
   font-family: "Bebas Neue", cursive;
 }
-.md-text{
-  font-size:1.1em !important;
+.md-text {
+  font-size: 1.1em !important;
 }
-.sm-text{
-  font-size:1em !important;
+.sm-text {
+  font-size: 1em !important;
 }
-.light{
+.light {
   font-weight: 100;
 }
-.bold{
+.bold {
   font-weight: 700;
 }
 .sub-heading {
@@ -31,7 +41,6 @@ $link:#c0c4fc;
   font-family: "Bebas Neue", cursive;
 }
 //end of text sizes and fonts
-
 
 //colors---
 .primary-bg {
@@ -46,16 +55,18 @@ $link:#c0c4fc;
 .secondary-text {
   color: $secondary;
 }
-.link{
-  color:$link;
+.link {
+  color: $link;
   text-decoration: underline;
+  cursor: pointer;
 }
 //end of colors
 
 //icons--
-.bi-star-fill,.bi-star,.bi-star-half{
-  font-size:0.9rem !important;
-  color:$secondary;
+.bi-star-fill,
+.bi-star,
+.bi-star-half {
+  font-size: 0.9rem !important;
+  color: gold;
 }
 //end of icons
-

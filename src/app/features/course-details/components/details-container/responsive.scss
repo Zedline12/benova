@@ -1,0 +1,25 @@
+@media(max-width:1200px){
+    .details {
+  padding: 30px 50px 0px 120px;
+}
+}
+@media(max-width:986px){
+    .right-section  {
+        max-width: 45em !important;
+        background:none !important;
+    }
+    .course-image{
+        height:40vh !important;
+    }
+    .details{
+        padding:2em !important;
+    }
+}
+@media(max-width:576px){
+    .details{
+        padding:20px !important;
+    }
+    .course-image{
+        height:30vh !important;
+    }
+}

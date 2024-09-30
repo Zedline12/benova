@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "The Complete Python Bootcamp From Zero to Hero in Python",
+    "author": "John William",
+    "rating": 4.6,
+    "price": 349.99,
+    "oldPrice": 1799.99,
+    "image": "assets/images/courses/co1.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "100 Days of Code:The Complete Python Course",
+    "author": "Dr. Angela Yu",
+    "rating": 4.7,
+    "price": 449.99,
+    "oldPrice": 2299.99,
+    "image": "assets/images/courses/co2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Automate the Boring Stuff with Python Programming",
+    "author": "AI Sweigart",
+    "rating": 4.6,
+    "price": 449.99,
+    "oldPrice": 2399.99,
+    "image": "assets/images/courses/co3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Python for Data Science and Machine Learning Bootcamp",
+    "author": "Jose Portillia",
+    "rating": 4.6,
+    "price": 449.99,
+    "oldPrice": 2299.99,
+    "image": "assets/images/courses/co4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "The Complete Javascript Course 2024:From Zero to Hero",
+    "author": "Jonas Schmedtmann",
+    "rating": 4.7,
+    "price": 449.99,
+    "oldPrice": 2499.99,
+    "image": "assets/images/courses/co5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "The Complete FULL Stack Javascript Course",
+    "author": "Jonseph Delgadillo",
+    "rating": 4.4,
+    "price": 249.99,
+    "oldPrice": 399.99,
+    "image": "assets/images/courses/co6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Master Javascript from Basics to Advanced",
+    "author": "Edyoda for Bussiness",
+    "rating": 4.5,
+    "price": 249.99,
+    "oldPrice": 399.99,
+    "image": "assets/images/courses/co7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Microsoft Excel - Excel from Beginner to Advanced",
+    "author": "Kyle Pew",
+    "rating": 4.6,
+    "price": 249.99,
+    "oldPrice": 1399.99,
+    "image": "assets/images/courses/co8.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Zero to Hero in Microsoft Excel:Complete Excel guide",
+    "author": "Start-Tech Academy",
+    "rating": 4.6,
+    "price": 249.99,
+    "oldPrice": 1099.99,
+    "image": "assets/images/courses/co9.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Microsoft Excel Weekender Crash Course",
+    "author": "Start-Tech Academy",
+    "rating": 4.4,
+    "price": 249.99,
+    "oldPrice": 399.99,
+    "image": "assets/images/courses/co10.jpg"
+  }
+]

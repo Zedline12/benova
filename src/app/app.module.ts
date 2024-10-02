@@ -6,7 +6,7 @@ import { SharedModule } from './shared/shared.module';
 import { LayoutsModule } from './layouts/layouts.module';
 import { CommonModule } from '@angular/common';
 import CoursesService from './core/services/courses.service';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';

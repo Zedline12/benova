@@ -7,6 +7,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { LayoutsModule } from '../../layouts/layouts.module';
 import { AboutUsComponent } from './components/about-us-section/about-us-section';
 import { StudentsRatingComponent } from './components/students-rating-section/students-rating-section';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [

@@ -29,12 +29,13 @@
                 experts
               </h5>
             </div>
-            <div class="col-12 d-flex justify-content-end mt-3">
-              <form class="bg-white p-0" style="width: 100%">
-                <input
+            <div (focusin)="[isSearchResultsOpen=true]" (focusout)="[isSearchResultsOpen=false]" class="col-12 d-flex justify-content-end mt-3">
+              <form (submit)="onSearchSubmit()" class="bg-white p-0" style="width: 100%;position: relative;">
+                <input #searchInput
                   style="width: 100%"
                   class="p-3"
                   placeholder="what do you want to learn?"
+                  (input)="searchCourses(searchInput.value)"
                 />
                 <div class="button">
                   <i
@@ -42,6 +43,31 @@
                     class="bi bi-search d-flex align-items-center p-3"
                   ></i>
                 </div>
+                <div *ngIf="(coursesService.searchCourses$ |async)!.length" [@searchResultsToggle]="isSearchResultsOpen ? 'open' : 'closed'"   class="searchResultsContainer bg-white container-fluid ">
+                  <div class="row mt-3 mb-3">
+                    <div class="col-12">
+                      <h5 class="bold">{{(coursesService.searchCourses$ |async)!.length}} Results for '{{searchInput.value}}'</h5>
+                    </div>
+                  </div>
+                  <hr/>
+                  @for (course of coursesService.searchCourses$ | async; track course._id) {
+                    <div [routerLink]="['/courses',course._id]" class="row mt-3 mb-3">
+                       <div class="col-2">
+                        <img class="courseSearchImage" src="{{course.image}}"/>
+                       </div>
+                       <div class="col-6">
+                        <div class="flex flex-row">
+                          <h6>{{course.title}}</h6>
+                        </div>
+                       </div>
+                       <div class="col-3 bold">
+                         <div class="flex flex-column">
+                            <h6>{{course.price}}$</h6>
+                            <h6 class="discount" *ngIf="course.oldPrice">{{course.oldPrice}}</h6>
+                         </div>
+                       </div>
+                    </div>
+                  }</div>
               </form>
             </div>
           </div>

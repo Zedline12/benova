@@ -3,7 +3,7 @@
   cursor: pointer;
 }
 *{
-  color:white;
+  
 }
 ::placeholder {
   color: white;
@@ -80,12 +80,12 @@ input[type="search"] {
   padding: 7px 8px;
   font-size: 14px;
   color: inherit;
-  border: 1px solid transparent;
+  border: 1px solid black;
   border-radius: inherit;
 }
 
 input[type="search"]::placeholder {
-  color: #bbb;
+  color: black;
 }
 
 button[type="submit"] {

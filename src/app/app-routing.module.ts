@@ -11,6 +11,7 @@ const cart = () =>
   import('./features/cart/cart.module').then((m) => m.CartModule);
 const auth = () =>
   import('./features/auth/auth.module').then((m) => m.AuthModule);
+const search=()=>import("./features/search/search.module").then((m)=>m.SearchModule)
 const routes: Routes = [
   {
     component: MainLayoutComponent,
@@ -32,6 +33,10 @@ const routes: Routes = [
         loadChildren: auth,
         path: 'auth',
       },
+      {
+        loadChildren:search,
+        path:'search'
+      }
     ],
   },
 ];

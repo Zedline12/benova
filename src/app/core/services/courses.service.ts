@@ -18,6 +18,7 @@ class CoursesService {
   private cartCourses$: BehaviorSubject<ICourse[]> = new BehaviorSubject<
     ICourse[]
   >([]);
+  public searchCourses$:BehaviorSubject<ICourse[]>=new BehaviorSubject<ICourse[]>([]);
   getCoursesService() {
     this.http.get<ICourse[]>('/courses').subscribe((data: ICourse[]) => {
       this.courses$.next(data);
@@ -25,6 +26,12 @@ class CoursesService {
   }
   getCartCoursesService() {
     return this.cartCourses$.value;
+  }
+  searchCourses(keywords:string){
+    if(!keywords.length) return this.searchCourses$.next([])
+     this.http.get<ICourse[]>(`/courses/search/${keywords}`).subscribe((results)=>{
+      this.searchCourses$.next(results)
+     })
   }
   addToCartService(courseId: string) {
     // // const courseItem = this.courses$.value.find(

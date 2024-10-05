@@ -41,7 +41,7 @@ import { Component } from '@angular/core';
     `
       @import 'global';
       .img-box {
-        width: 100%;
+        width: 90%;
       }
       .about_section .row {
         -webkit-box-align: center;

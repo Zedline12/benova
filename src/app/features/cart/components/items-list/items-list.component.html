@@ -6,7 +6,7 @@
     <hr />
     <div class="row p-0 m-0">
         @for (course of cartCourses;track course._id) {
-            <div class="col-12 mt-3">
+            <div class="col-12 mt-5">
                 <div class="row">
                   <div class="col-2 p-0 order-1">
                     <img class="course-image" src="{{course.image}}" />
@@ -27,11 +27,11 @@
                     </div>
                   </div>
         
-                  <div class="right-section col-lg-3  order-lg-5 order-0 p-0">
+                  <div class="right-section col-lg-3  order-5 p-0">
                     <div class="row d-flex justify-content-end">
                       <div class="col-lg-6 col-sm-10 col-8 buttons p-0">
                         <div class="d-flex flex-column">
-                          <h6 class="text-end mb-3 link">Remove</h6>
+                          <h6 (click)="removeFromCart(course._id)" class="text-end mb-3 link">Remove</h6>
                           <h6 class="text-end link">Save For Later</h6>
                         </div>
                       </div>

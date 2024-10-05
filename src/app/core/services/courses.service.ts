@@ -34,20 +34,27 @@ class CoursesService {
      })
   }
   addToCartService(courseId: string) {
-    // // const courseItem = this.courses$.value.find(
-    // //   (course) => course._id === courseId,
-    // // );
-    // this.cartCourses$.next([...this.cartCourses$.value, courseItem!]);
-    // const openedSnaack = this.snackServ.openSnackBar(
-    //   'Course Added to Cart',
-    //   'View Cart',
+    // const courseItem = this.courses$.value.find(
+    //   (course) => course._id === courseId,
     // );
-    // openedSnaack.onAction().subscribe(() => {
-    //   this.router.navigate(['/cart']);
-    // });
-    // openedSnaack.afterDismissed().subscribe(null, null, () => {});
+    this.getCourseById(courseId).subscribe((course) => {    
+      this.cartCourses$.next([...this.cartCourses$.value, course] as ICourse[]); //this.cartCourses$.next(course);
+    })
+    const openedSnaack = this.snackServ.openSnackBar(
+      'Course Added to Cart',
+      'View Cart',
+    );
+    openedSnaack.onAction().subscribe(() => {
+      this.router.navigate(['/cart']);
+    });
+    openedSnaack.afterDismissed().subscribe(null, null, () => {});
   }
-  getCourseById(id: string) {
+  removeFromCartService(courseId: string) {
+    this.cartCourses$.next(
+      this.cartCourses$.value.filter((course) => course._id !== courseId),
+    );
+  }
+  getCourseById(id: string):Observable<ICourse> {
     return this.http.get<ICourse>(`/courses/${id}`);
   }
 }

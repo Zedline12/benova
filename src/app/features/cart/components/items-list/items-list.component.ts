@@ -10,5 +10,8 @@ import { ICourse } from '../../../../core/interfaces/ICourse';
 export class ItemsListComponent implements OnInit {
   constructor(private coursesService: CoursesService) {}
   cartCourses: ICourse[] = [];
-  ngOnInit(): void { this.cartCourses=this.coursesService.getCartCoursesService() }
+  ngOnInit(): void { this.cartCourses = this.coursesService.getCartCoursesService() }
+  removeFromCart(courseId: string) {
+    this.coursesService.removeFromCartService(courseId);
+  }
 }

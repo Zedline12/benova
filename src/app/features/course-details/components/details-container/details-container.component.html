@@ -63,9 +63,9 @@
           </h6>
         </div>
       </div>
-      <div class="row">
+      <div class="row d-flex justify-content-center">
         <div
-          style="position: relative"
+          style="position: relative;"
           class="course-image p-0 col-12 d-flex justify-content-center"
           [ngStyle]="{
             'background-image':
@@ -97,7 +97,7 @@
           </div>
         </div>
       </div>
-      <div class="row d-lg-none d-flex">
+      <div class="row d-lg-none d-flex mt-3">
         <div class="col-12 mt-3">
           <h1 class="course-title text-start">
             {{ course.title }}
@@ -135,9 +135,35 @@
             </h6>
           </div>
         </div>
+        <hr/>
+        <div class="col-12 d-flex justify-content-center ">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-start mb-3">
+              <h4 class="text-start bold">{{course.price}}$</h4>
+            </div>
+            <div class="col-12">
+              <rectangle-btn
+              [height]="'3em'"
+              [width]="'100%'"
+              [color]="'secondary'"
+              [fontSize]="'1em'"
+              (click)="addToCart(course._id)"
+              >Add To Cart</rectangle-btn
+            >
+            </div>
+            <div class="col-12">
+              <div  class="col-12  d-flex justify-content-center mb-3">
+                <div class="d-flex w-100 flex-row mb-3 mt-3">
+                  <input style="padding:5px;color:black;width:100%" placeholder="Enter Coupon"/>
+                   <button  style="background-color: black;padding:5px;">Apply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row d-flex d-lg-flex d-none justify-content-center mt-3">
-        <div class="col-10">
+      <div style="position: relative;" class="row d-flex d-lg-flex d-none justify-content-center mt-4">
+        <div  class="col-10">
           <div class="row">
             <div class="col-12">
               <h3 class="price">${{ course.price }}</h3>
@@ -151,6 +177,14 @@
                 (click)="addToCart(course._id)"
                 >Add To Cart</rectangle-btn
               >
+            </div>
+            
+            <div style="position:absolute;top:100%;width: 120%;left:0%;" class="col-12 bg-white d-flex justify-content-center mb-3">
+              <div class="d-flex flex-row mb-3 mt-3">
+              
+                <input style="padding:4px;color:black;" placeholder="Enter Coupon"/>
+                 <button  style="background-color: black;padding:4px;">Apply</button>
+              </div>
             </div>
           </div>
         </div>

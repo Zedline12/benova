@@ -8,6 +8,8 @@ import { LayoutsModule } from '../../layouts/layouts.module';
 import { AboutUsComponent } from './components/about-us-section/about-us-section';
 import { StudentsRatingComponent } from './components/students-rating-section/students-rating-section';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WorkspacesComponent } from './components/workspaces/workspaces.component';
+import { BenovaBussinesComponent } from './components/benova-bussines/benova-bussines.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     AboutUsComponent,
     StudentsRatingComponent,
+    WorkspacesComponent,
+    BenovaBussinesComponent,
   ],
   imports: [LayoutsModule, HomeRoutingModule, SharedModule, CommonModule],
   providers: [],

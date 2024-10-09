@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav
-  style="background-color: transparent; width: 100%"
-  class="navbar navbar-expand-lg d-flex align-items-center bg-white"
+  style=" width: 100%;"
+  class="navbar navbar-expand-lg d-flex align-items-center"   [ngClass]="{'nav-home': isHomePage === true}"
 >
   <!-- Container wrapper -->
   <div style="padding: 15px 50px 15px 50px" class="container-fluid">
@@ -51,12 +51,13 @@
         <a>About</a>
         <a>Blog</a>
         <a>Contact</a>
-        <a style="position: relative;" [routerLink]="['/cart']">
+        <a style="position: relative;color: inherit;" [routerLink]="['/cart']">
           <i
-            style="color: black; font-size: 1rem"
+            style=" font-size: 1rem"
+            [ngStyle]="{ 'color':isHomePage ? 'white' : 'black'}"
             class="fa badge fa-lg"
             >&#xf07a;</i
-          ><span style="position:absolute;top:-12px;right:44px;color:black;font-weight: bold;">{{ coursesService.getCartCoursesService().length }}</span></a
+          ><span style="position:absolute;top:-12px;right:44px;font-weight: bold;">{{ coursesService.getCartCoursesService().length }}</span></a
         >
         <a>
           <rectangle-btn

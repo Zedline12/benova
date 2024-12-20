@@ -1,0 +1,25 @@
+@import "global";
+* {
+  color: $black;
+}
+.heading{
+    font-size:var(--fs-xxxl)
+}
+.cards-row{
+    margin-top:var(--rowgap-3xl)
+}
+.card {
+    height:200px;
+    max-width:400px;
+}
+@media(max-width:400px){
+    .card{
+        height:250px;
+    }
+    .card-body{
+        padding:0px;
+    }
+}
+.card-profilePic {
+  width: 3rem;
+}

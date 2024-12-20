@@ -1,155 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 @import "global";
-* :not(input, div) {
-  cursor: pointer;
+* {
+  color: $black;
 }
-*{
-  
-}
-::placeholder {
-  color: white;
-  opacity: 1; /* Firefox */
-}
-
-::-ms-input-placeholder {
-  /* Edge 12 -18 */
-  color: white;
-}
-.nav-home{
-  background-color: transparent !important;
-  position: absolute;
-  color:white;
-}
-.navbar{
-  transition: 0.5s;
+.sticky-nav {
   background-color: white;
-}
-.logo {
-  width: 5em;
-}
-.form-control {
-  background-color: transparent;
-  border-radius: 25px;
-  padding: 10px 5px 10px 40px;
-  border: none;
-  border-bottom: 1px solid white;
-  color: white;
-}
-ul {
-  list-style-type: none; /* Remove bullets */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-  display: flex; /* Use flexbox to align items horizontally */
-}
-.list a {
-  padding-right: 30px;
-  font-size: 0.9em;
-  font-weight: 600;
-}
-
-ul li {
-  margin-right: 40px; /* Space between items */
-}
-.bi-cart3 {
-  font-size: 1.5em;
   color: black;
+  position: sticky !important;
+  top: 0px;
+  z-index: 10000;
 }
-.bi-list {
-  font-size: 1.3em;
+/*navbar component*/
+.navbar {
+  margin-bottom: var(--rowgap-3xl);
 }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-}
-
-form {
-  color: #555;
-  display: flex;
-  padding: 2px;
-  border: 1px solid currentColor;
-  border-radius: 5px;
-  margin: 0 0 30px;
-}
-
-input[type="search"] {
-  border: none;
-  background: transparent;
-  margin: 0;
-  padding: 7px 8px;
-  font-size: 14px;
-  color: inherit;
-  border: 1px solid black;
-  border-radius: inherit;
-}
-
-input[type="search"]::placeholder {
-  color: black;
-}
-
-button[type="submit"] {
-  text-indent: -999px;
-  overflow: hidden;
-  width: 40px;
-  padding: 0;
-  margin: 0;
-  border: 1px solid transparent;
-  border-radius: inherit;
-  background: transparent
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
-    no-repeat center;
+.navbar__logo {
+  font-family: "Orbitron", sans-serif;
   cursor: pointer;
-  opacity: 0.7;
+  margin-right: var(--columnpadding-3xl);
 }
-
-button[type="submit"]:hover {
-  opacity: 1;
+.navbar__links-row {
+  padding: 0px var(--columnpadding-xl);
 }
-
-button[type="submit"]:focus,
-input[type="search"]:focus {
-  box-shadow: 0 0 3px 0 #1183d6;
-  border-color: #1183d6;
-  outline: none;
+.navbar__link {
+  font-size: var(--fs-base);
+  padding: var(--columnpadding-xl);
 }
-
-form.nosubmit {
-  border: none;
-  padding: 50px;
+.nav-row {
+  padding: 30px 0px;
 }
-
-input.nosubmit {
-  border: 1px solid #555;
-  width: 100%;
-  padding: 19px 40px 9px 40px;
-  background: transparent
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
-    no-repeat 13px center;
+.sticky {
+  position: fixed;
 }
-.has-search .form-control {
-  padding-left: 2.375rem;
-}
-
-.has-search .form-control-feedback {
-  position: absolute;
-  z-index: 2;
-  display: block;
-  width: 2.375rem;
-  height: 2.375rem;
-  line-height: 2.375rem;
-  padding: 5px;
+.list-item {
+  font-size: clamp(0.8rem, 1vw, 0.9rem) !important;
   text-align: center;
-  pointer-events: none;
-  color: #aaa;
 }
-
+.navbar__button {
+  border: 1px solid $black;
+  background-color: $secondary;
+  color: white;
+  font-weight: 700;
+  padding: 8px 16px;
+}
+.navbar__collapse-row {
+  border-top: 1px solid $black;
+}
+.dropdown-item{
+  font-size:var(--fs--sm);
+  padding:20px;
+}
+.navbar__profile-icon{
+  font-size:var(--fs-md);
+  cursor: pointer; 
+  padding-left:var(--columnpadding-2xl)
+}
+.navbar__cart {
+  padding-right: var(--columnpadding-5xl);
+  font-size: var(--fs-md);
+}
+.list-button:hover {
+  transition: 0.5s;
+  background-color: whitesmoke;
+}
+.list-button-white {
+  color: black !important;
+  border-color: black;
+}
+/*Utils*/
+.dropdown-menu {
+  padding: 15px;
+  font-size: var(--fs-base);
+}
+/**/

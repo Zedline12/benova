@@ -8,15 +8,7 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
-  declarations: [
-    SidebarComponent,
-    SearchComponent,
-    SearchResultsComponent
-  ],
-  imports: [
-    CommonModule,
-    SearchRoutingModule,
-    LayoutsModule,SharedModule
-  ]
+  declarations: [SidebarComponent, SearchComponent, SearchResultsComponent],
+  imports: [CommonModule, SearchRoutingModule, LayoutsModule, SharedModule],
 })
-export class SearchModule { }
+export class SearchModule {}

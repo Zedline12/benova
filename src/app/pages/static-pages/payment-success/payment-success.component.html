@@ -1,0 +1,31 @@
+<div class="container" *ngIf="order">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="title">
+        Thank you for your purchase<i
+          class="title__icon bi bi-check-circle-fill"
+        ></i>
+      </h1>
+    </div>
+    <div class="col-12 body-section">
+      <p class="body">
+        You have successfully purchased the courses. You can access them anytime
+        from your courses section.
+      </p>
+    </div>
+    <div class="col-12 order__info-row">
+      <p style="cursor: pointer;" class="order__info">
+        OrderId: <span style="font-weight: 500">{{ order.orderId }}</span>
+      </p>
+      <a class="order__info info--link" href="{{ order.receiptUrl }}"
+        >Receipt Url</a
+      >
+    </div>
+    <div class="col-12 buttons-section">
+      <div class="d-flex flex-row">
+        <button class="button button--important">My Courses</button>
+        <button class="button">Home Page</button>
+      </div>
+    </div>
+  </div>
+</div>

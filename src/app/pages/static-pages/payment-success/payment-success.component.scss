@@ -1,0 +1,46 @@
+@import "global";
+.container {
+  
+  
+}
+.title {
+  font-size: var(--fs-xxxl);
+  color: $black;
+}
+.title__icon {
+  color: limegreen;
+  margin-left: var(--columnpadding-l);
+}
+.order__info-row{
+  margin-top:var(--rowgap-2xl)
+}
+.info--link{
+  text-decoration: none;
+}
+.order__info{
+  font-size:var(--fs--base)
+}
+.body {
+  font-size: var(--fs-sm);
+}
+.body-section {
+  margin-top: var(--rowgap-lg);
+}
+.buttons-section {
+  margin-top: var(--rowgap-2xl);
+}
+.button {
+  padding: 8px 16px;
+  margin:0px 32px;
+  font-weight: 500;
+  background-color: white;
+  border: 1px solid $black;
+  color: $black;
+}
+.button:first-child{
+  margin-left:0px;
+}
+.button--important {
+  background-color: $secondary;
+  color: white;
+}

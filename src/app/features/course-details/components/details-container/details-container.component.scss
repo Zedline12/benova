@@ -1,31 +1,47 @@
 @import "global";
 @import "./responsive.scss";
-.details {
-  padding: 130px 50px 0px 120px;
+.details-container {
+  padding: 50px 50px 0px 50px;
 }
 * {
   color: white;
 }
-h1 {
-  font-size: clamp(1.4rem, 2.5vw, 2rem) !important;
+.course-title {
+  font-size: var(--fs-lg);
 }
-h5 {
-  font-size: clamp(1rem, 1.5vw, 1.3rem) !important;
+.course__price{
+  font-size: var(--fs-xl);
+  color:$black;
 }
-h6{
-    font-size: clamp(0.8rem, 0.9vw, 1rem) !important;
+.enter-coupon{
+  background-color: rgb(243, 243, 243);
+}
+.form__add-to-cart{
+  background-color: $secondary;
+  padding:8px 16px;
+  font-weight: 500;
+  font-size: var(--fs--xs);
+}
+.bi-star-fill , .bi-star-half{
+color:gold;
+}
+.course-description{
+  font-size: var(--fs--base);
+  font-weight: 400;
+}
+.apply-button {
+  background-color: black;
+  padding: 5px;
+  font-size: 0.9rem;
 }
 .right-section {
-  background-color: white;
+  background-color: rgb(248, 248, 248);
 }
 .notes {
   margin-bottom: 2em;
 }
 .ratings {
   margin-top: 2em;
-}
-.small-text h6 {
-  font-size: 0.9rem;
 }
 .links {
   margin: 0px 5px 0px 5px;
@@ -35,10 +51,6 @@ h6{
 }
 .link {
   font-size: 0.9em;
-  font-weight: 700;
-}
-.course-title {
-  font-size: 1.8em;
   font-weight: 700;
 }
 .course-image {
@@ -52,7 +64,6 @@ h6{
     ),
     url("/assets/images/learn-python.jpeg");
   height: 15em;
-  
 }
 .play-button {
   cursor: pointer;

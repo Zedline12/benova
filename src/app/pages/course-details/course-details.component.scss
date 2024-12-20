@@ -1,5 +1,9 @@
+@import "global";
 * {
-  color: white;
+  color: $black;
+}
+.row{
+  margin:var(--rowgap-2xl) 0px
 }
 .fadee {
   -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);

@@ -1,72 +1,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
-$primary: #26243c;
-$secondary: rgba(103, 58, 183, 0.8);
+$primary: #9a00fa;
+$secondary: #f200fa;
 $thirdary: #00c16e;
 $link: #c0c4fc;
+$black: #3a3a3a;
+$spacing: (
+  xxs: 4px,
+  xs: 8px,
+  sm: 12px,
+  md: 16px,
+  lg: 24px,
+  xl: 32px,
+  xxl: 48px,
+);
+@media (max-width: 430px) {
+  :root {
+    --rowGap2XS: 4px;
+    --rowGapXS: 8px;
+    --rowGapS: 12px;
+    --rowGapM: 16px;
+    --rowGapL: 24px;
+    --rowGapXL: 32px;
+    --rowGap2XL: 48px;
+    --rowGap3XL: 64px;
+    --rowGap4XL: 96px;
+    --rowGap5XL: 128px;
+    --rowGap6XL: 192px;
+    --rowGap7XL: 256px;
+  }
+}
+:root {
+  /*Typography*/
+  --fs--xs: clamp(0.6944rem, 0.6341rem + 0.3019vw, 0.8681rem);
+  --fs--sm: clamp(0.8333rem, 0.7609rem + 0.3623vw, 1.0417rem);
+  --fs--base: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+  --fs-sm: clamp(1.2rem, 1.0957rem + 0.5217vw, 1.5rem);
+  --fs-md: clamp(1.44rem, 1.3148rem + 0.6261vw, 1.8rem);
+  --fs-lg: clamp(1.728rem, 1.5777rem + 0.7513vw, 2.16rem);
+  --fs-xl: clamp(2.0736rem, 1.8933rem + 0.9016vw, 2.592rem);
+  --fs-xxl: clamp(2.4883rem, 2.2719rem + 1.0819vw, 3.1104rem);
+  --fs-xxxl: clamp(2.4883rem, 2.2719rem + 1.0819vw, 3.1104rem);
+  /*Column padding*/
+  --columnpadding-s: 4px;
+  --columnpadding-m: 8px;
+  --columnpadding-l: 12px;
+  --columnpadding-xl: 16px;
+  --columnpadding-2xl: 20px;
+  --columnpadding-3xl: 28px;
+  --columnpadding-4xl: 36px;
+  --columnpadding-5xl: 44px;
+
+  /**/
+  /**/
+  //row spacing
+  --rowgap-2xs: 4px;
+  --rowgap-xs: 8px;
+  --rowgap-sm: 12px;
+  --rowgap-md: 16px;
+  --rowgap-lg: 24px;
+  --rowgap-xl: 32px;
+  --rowgap-2xl: 48px;
+  --rowgap-3xl: 64px;
+  --rowgap-4xl: 96px;
+  --rowgap-5xl: 128px;
+  --rowgap-6xl: 192px;
+  --rowgap-7xl: 256px;
+  /**/
+  /*section spacing*/
+}
+p {
+  padding: 0;
+  margin: 0;
+}
 //text sizes and fonts--
-.button {
-  background-color: $thirdary;
-  cursor: pointer;
-}
-.discount {
-  font-weight: 100;
-  text-decoration: line-through;
-}
-.price {
-  font-family: "Fjalla One", sans-serif;
-  color: #3b3b3b;
-}
-.lg-text {
-  font-size: 1.7rem !important;
-}
-.heading {
-  font-size: 3em;
-  font-family: "Bebas Neue", cursive;
-}
-.md-text {
-  font-size: 1.1em !important;
-}
-.sm-text {
-  font-size: 1em !important;
-}
-.light {
-  font-weight: 100;
-}
-.bold {
-  font-weight: 700;
-}
-.sub-heading {
-  font-size: 2em;
-  font-family: "Bebas Neue", cursive;
-}
-//end of text sizes and fonts
 
-//colors---
-.primary-bg {
-  background-color: $primary;
-}
-.secondary-bg {
-  background-color: $secondary;
-}
-.primary-text {
-  color: $primary;
-}
-.secondary-text {
-  color: $secondary;
-}
-.link {
-  color: $link;
-  text-decoration: underline;
-  cursor: pointer;
-}
-//end of colors
-
-//icons--
-.bi-star-fill,
-.bi-star,
-.bi-star-half {
-  font-size: 0.9rem !important;
-  color: gold;
-}
 //end of icons

@@ -1,0 +1,18 @@
+@import "global";
+.form__error-label{
+    color:red;
+}
+.form__required-star{
+    color:red;
+}
+.form__title{
+    font-size:var(--fs-lg);
+    color:$black;
+}
+.form__submit-button{
+    background-color: $secondary;
+    color:white;
+    padding:8px 16px;
+    font-size:var(--fs--sm);
+    font-weight: 500;
+}

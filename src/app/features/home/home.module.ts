@@ -7,9 +7,8 @@ import { SharedModule } from '../../shared/shared.module';
 import { LayoutsModule } from '../../layouts/layouts.module';
 import { AboutUsComponent } from './components/about-us-section/about-us-section';
 import { StudentsRatingComponent } from './components/students-rating-section/students-rating-section';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { WorkspacesComponent } from './components/workspaces/workspaces.component';
-import { BenovaBussinesComponent } from './components/benova-bussines/benova-bussines.component';
+import { WhyUsComponent } from './components/why-us-section/why-us-section.component';
+import { LearnBetterWithUsSectionComponent } from './components/learn-better-with-us-section/learn-better-with-us-section.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,8 @@ import { BenovaBussinesComponent } from './components/benova-bussines/benova-bus
     HomeComponent,
     AboutUsComponent,
     StudentsRatingComponent,
-    WorkspacesComponent,
-    BenovaBussinesComponent,
+    WhyUsComponent,
+    LearnBetterWithUsSectionComponent,
   ],
   imports: [LayoutsModule, HomeRoutingModule, SharedModule, CommonModule],
   providers: [],

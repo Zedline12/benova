@@ -1,4 +1,4 @@
-<div class="details bg-dark container-fluid">
+<div class="details-container bg-dark container-fluid">
   <div class="row d-flex justify-content-center">
     <div class="col-lg-7 order-lg-1 order-2 d-lg-block d-none">
       <div class="row">
@@ -17,7 +17,7 @@
           </h1>
         </div>
         <div style="margin-top: 1em" class="col-12">
-          <h5 class="course-description light">
+          <h5 class="course-description">
             A practical programming course for office workers, academics, and
             administrators who want to improve their productivity.
           </h5>
@@ -35,7 +35,10 @@
         </div>
         <div class="col-12 mt-3 small-text">
           <h6 style="font-size: 0.9em">
-            Created by <span class="link">{{ course.author }}</span>
+            Created by
+            <span class="link"
+              >{{ course.author.firstName }} {{ course.author.lastName }}</span
+            >
           </h6>
         </div>
         <div class="notes col-12 mt-3 small-text">
@@ -55,7 +58,7 @@
       class="col-lg-5 order-lg-2 order-1 right-section"
     >
       <div class="row d-flex justify-content-start">
-        <div class="col-12 d-flex d-lg-none p-0">
+        <div class="col-12 d-flex d-lg-none d-sm-block d-none p-0">
           <h6>
             <span class="links">Development</span>><span class="links"
               >Programing Languages</span
@@ -65,7 +68,7 @@
       </div>
       <div class="row d-flex justify-content-center">
         <div
-          style="position: relative;"
+          style="position: relative"
           class="course-image p-0 col-12 d-flex justify-content-center"
           [ngStyle]="{
             'background-image':
@@ -75,17 +78,18 @@
             rgba(0, 0, 0, 0)
           ),
           url(' +
-              course.image +
+              course.thumbnailLink +
               ')',
           }"
         >
           <div class="row">
             <div
+              (click)="openWindow()"
               class="col-12 play-button d-flex justify-content-center align-items-center"
             >
               <i
                 style="font-size: 4em"
-                class="d-flex justify-content-center bi bi-play-circle"
+                class="d-flex justify-content-center bi bi-play-circle-fill"
               ></i>
             </div>
             <div
@@ -122,7 +126,10 @@
         </div>
         <div class="col-12 mt-3 small-text">
           <h6 style="font-size: 0.9em">
-            Created by <span class="link">{{ course.author }}</span>
+            Created by
+            <span class="link"
+              >{{ course.author.firstName }} {{ course.author.lastName }}</span
+            >
           </h6>
         </div>
         <div class="notes col-12 mt-3 small-text">
@@ -135,55 +142,56 @@
             </h6>
           </div>
         </div>
-        <hr/>
-        <div class="col-12 d-flex justify-content-center ">
+        <hr />
+        <div class="col-12 d-flex justify-content-center">
           <div class="row">
             <div class="col-12 d-flex justify-content-start mb-3">
-              <h4 class="text-start bold">{{course.price}}$</h4>
+              <h4 class="text-start course__price bold">{{ course.price }}$</h4>
             </div>
             <div class="col-12">
-              <rectangle-btn
-              [height]="'3em'"
-              [width]="'100%'"
-              [color]="'secondary'"
-              [fontSize]="'1em'"
-              (click)="addToCart(course._id)"
-              >Add To Cart</rectangle-btn
-            >
+              <button class="form__add-to-cart" (click)="addToCart(course._id)">
+                Add To Cart
+              </button>
             </div>
             <div class="col-12">
-              <div  class="col-12  d-flex justify-content-center mb-3">
+              <div class="col-12 d-flex justify-content-center mb-3">
                 <div class="d-flex w-100 flex-row mb-3 mt-3">
-                  <input style="padding:5px;color:black;width:100%" placeholder="Enter Coupon"/>
-                   <button  style="background-color: black;padding:5px;">Apply</button>
+                  <input
+                    style="padding: 5px; width: 100%"
+                    placeholder="Enter Coupon"
+                  />
+                  <button class="apply-button">Apply</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div style="position: relative;" class="row d-flex d-lg-flex d-none justify-content-center mt-4">
-        <div  class="col-10">
+      <div
+        style="position: relative"
+        class="row d-flex d-lg-flex d-none justify-content-center mt-4"
+      >
+        <div class="col-10">
           <div class="row">
             <div class="col-12">
-              <h3 class="price">${{ course.price }}</h3>
+              <h3 class="course__price">${{ course.price | money }}</h3>
             </div>
-            <div class="col-12 mt-2 mb-3">
-              <rectangle-btn
-                [height]="'3em'"
-                [width]="'100%'"
-                [color]="'secondary'"
-                [fontSize]="'1em'"
-                (click)="addToCart(course._id)"
-                >Add To Cart</rectangle-btn
-              >
+            <div class="col-12 mt-2 d-flex justify-content-center">
+              <button class="form__add-to-cart" (click)="addToCart(course._id)">
+                Add To Cart
+              </button>
             </div>
-            
-            <div style="position:absolute;top:100%;width: 120%;left:0%;" class="col-12 bg-white d-flex justify-content-center mb-3">
+
+            <div
+              style="position: absolute; top: 100%; width: 120%; left: 0%"
+              class="col-12 enter-coupon d-flex justify-content-center mb-3"
+            >
               <div class="d-flex flex-row mb-3 mt-3">
-              
-                <input style="padding:4px;color:black;" placeholder="Enter Coupon"/>
-                 <button  style="background-color: black;padding:4px;">Apply</button>
+                <input
+                  style="padding: 4px; color: black"
+                  placeholder="Enter Coupon"
+                />
+                <button class="apply-button">Apply</button>
               </div>
             </div>
           </div>

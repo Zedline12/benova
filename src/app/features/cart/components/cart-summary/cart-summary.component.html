@@ -1,10 +1,9 @@
 <div class="container-fluid">
   <div class="row">
     <div class="d-flex justify-content-center flex-column">
-      <h6>Total:</h6>
-      <h2 class="bold">299$</h2>
-      <h5 style="color: gray" class="discount">350$</h5>
-      <button class="checkout-btn">Checkout</button>
+      <h1 class="summary__title">Total:</h1>
+      <p class="summary__total">${{ totalCart | money }}</p>
+      <button (click)="checkout()" class="checkout-btn">Checkout</button>
     </div>
   </div>
   <hr />

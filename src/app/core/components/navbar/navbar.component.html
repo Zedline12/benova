@@ -1,119 +1,109 @@
-<!-- Navbar -->
-<nav
-  style=" width: 100%;"
-  class="navbar navbar-expand-lg d-flex align-items-center"   [ngClass]="{'nav-home': isHomePage === true}"
->
-  <!-- Container wrapper -->
-  <div style="padding: 15px 50px 15px 50px" class="container-fluid">
-    <!-- Navbar brand -->
-    <a [routerLink]="['/']" class="navbar-brand me-2">
-      <img
-        class="logo"
-        src="assets/images/benova_logo.png"
-        alt="MDB Logo"
-        loading="lazy"
-        style="margin-top: -1px"
-      />
-    </a>
+<div class="container-fluid navbar">
+  <div
+    class="nav-row w-100 d-flex flex-row align-items-center justify-content-between"
+  >
+    <div class="d-flex flex-row align-items-center">
+      <h3 class="navbar__logo nav-item" [routerLink]="['/']">FutureMinds</h3>
+      <h3 class="logo__v-line d-sm-block d-none">|</h3>
 
-    <!-- Toggle button -->
+      <div class="navbar__links-row d-flex flex-row d-md-flex d-none">
+        <h5 class="navbar__link">Browse Courses</h5>
 
-    <i
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarButtonsExample"
-      aria-controls="navbarButtonsExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-      class="navbar-toggler bi bi-list"
-    ></i>
+        <h5 class="navbar__link">About</h5>
 
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarButtonsExample">
-      <!-- Left links -->
-
-      <div
-        style="margin-left: 2%; width: 20%"
-        class="navbar-nav me-auto mb-2 mb-lg-0 form-group has-search"
-      >
-        <i class="bi bi-search form-control-feedback"></i>
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Search Courses..."
-        />
+        <h5 class="navbar__link">Conatct Us</h5>
       </div>
-      <!-- Left links -->
-
-      <div class="list d-none d-md-flex align-items-center">
-        <a>Home</a>
-        <a>Browse Courses</a>
-        <a>About</a>
-        <a>Blog</a>
-        <a>Contact</a>
-        <a style="position: relative;color: inherit;" [routerLink]="['/cart']">
-          <i
-            style=" font-size: 1rem"
-            [ngStyle]="{ 'color':isHomePage ? 'white' : 'black'}"
-            class="fa badge fa-lg"
-            >&#xf07a;</i
-          ><span style="position:absolute;top:-12px;right:44px;font-weight: bold;">{{ coursesService.getCartCoursesService().length }}</span></a
-        >
-        <a>
-          <rectangle-btn
-            style="float: right"
-            [color]="'secondary'"
-            [size]="'medium'"
-          >
-            Login</rectangle-btn
-          >
-        </a>
-      </div>
-      <div class="list d-md-none">
-        <i
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#listcollapse"
-          aria-controls="collapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="bi bi-list"
-        ></i>
-        <div class="collapse navbar-collapse" id="listcollapse">
-          <div class="d-flex flex-column">
-            <a>Home</a>
-            <a>Browse Courses</a>
-            <a>About</a>
-            <a>Blog</a>
-            <a>Contact</a>
-          </div>
-        </div>
-        <a>
-          <rectangle-btn
-            style="float: right"
-            [size]="'large'"
-            [style]="'width:5em;'"
-          >
-            Login</rectangle-btn
-          >
-        </a>
-        <a
-          [routerLink]="['/cart']"
-          class="cart"
-          style="
-            text-decoration: none;
-            float: right;
-            font-size: 2rem !important;
-            color: black;
-          "
-          ><i class="fa badge fa-lg" value="5">&#xf290;</i>
-          <i class="fa badge fa-lg" value="8">&#xf07a;</i>
-          ></a
-        >
+      <div class="navbar__links-row dropdown d-md-none d-sm-block d-none">
+        <h5 data-bs-toggle="dropdown">Links</h5>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Browse Courses</a></li>
+          <li><a class="dropdown-item" href="#">About us</a></li>
+          <li><a class="dropdown-item" href="#">Contact Us</a></li>
+        </ul>
       </div>
     </div>
-    <!-- Collapsible wrapper -->
+
+    <div class="d-flex justify-content-end d-sm-flex d-none">
+      <a
+        class="nav-item"
+        style="position: relative; color: inherit"
+        [routerLink]="['/cart']"
+      >
+        <i class="navbar__cart bi bi-cart2"></i
+        ><span
+          style="position: absolute; top: -12px; left: 9px; font-weight: bold"
+          >{{ coursesService.getCartCoursesService().length }}</span
+        ></a
+      >
+     
+      <div class="dropdown">
+        <i
+        *ngIf="isLoggedIn"
+        class="navbar__profile-icon bi bi-person-circle"
+        data-bs-toggle="dropdown"
+      ></i>
+      
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#"><i class="bi bi-gear-wide me-2"></i>Settings</a></li>
+          <li><a class="dropdown-item" href="#"><i class="bi bi-list me-1"></i> My Courses</a></li>
+          <li><a class="dropdown-item" (click)="logOut()"><i class="bi bi-door-open-fill me-2"></i>Log Out</a></li>
+        </ul>
+      </div>
+      <button
+        *ngIf="!isLoggedIn"
+        [routerLink]="['/auth/signup']"
+        class="navbar__button"
+      >
+        SignUp
+      </button>
+    </div>
+    <div class="d-flex justify-content-end d-sm-none">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
   </div>
-  <!-- Container wrapper -->
-</nav>
-<!-- Navbar -->
+</div>
+<div class="row navbar__collapse-row collapse navbar-collapse" id="navbarNav">
+  <div class="d-flex flex-row justify-content-between pt-3">
+    <div>
+      <div class="d-flex flex-column">
+        <h5 class="navbar__link">Browse Courses</h5>
+
+        <h5 class="navbar__link">About</h5>
+
+        <h5 class="navbar__link">Conatct Us</h5>
+      </div>
+    </div>
+    <div>
+      <a
+        class="nav-item"
+        style="position: relative; color: inherit"
+        [routerLink]="['/cart']"
+      >
+        <i class="navbar__cart bi bi-cart2"></i
+        >
+        <span
+          style="position: absolute; top: -20px; left: 9px; font-weight: bold"
+          >{{ coursesService.getCartCoursesService().length }}</span
+        ></a
+      >
+      <i
+      *ngIf="isLoggedIn"
+      class="navbar__profile-icon bi bi-person-circle"
+    ></i>
+    <button
+      *ngIf="!isLoggedIn"
+      [routerLink]="['/auth/signup']"
+      class="navbar__button"
+    >
+      SignUp
+    </button>
+    </div>
+  </div>
+</div>

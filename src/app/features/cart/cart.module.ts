@@ -7,19 +7,21 @@ import { CartComponent } from '../../pages/cart/cart.component';
 import { LayoutsModule } from '../../layouts/layouts.module';
 import { SharedModule } from '../../shared/shared.module';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
+import { CoreModule } from '../../core/core.module';
 
 
 @NgModule({
   declarations: [
     CartComponent,
     ItemsListComponent,
-    CartSummaryComponent
+    CartSummaryComponent,
   ],
   imports: [
     CommonModule,
     CartRoutingModule,
     LayoutsModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ]
 })
 export class CartModule { }

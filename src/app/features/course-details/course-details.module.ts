@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import SnackService from '../../core/services/snack.service';
+import { CoreModule } from '../../core/core.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import SnackService from '../../core/services/snack.service';
   imports: [
     CommonModule,
     CourseDetailsRoutingModule,
+    CoreModule,
     SharedModule,
     LayoutsModule,
     MatSnackBarModule,

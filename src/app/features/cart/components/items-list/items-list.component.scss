@@ -2,9 +2,19 @@
 .course-image{
    width:100%;
 }
+.cart__subheading{
+    font-size:var(--fs-sm);
+    margin-top:var(--rowgap-lg)
+}
+.cart__items-row{
+    margin-top:var(--rowgap-xl)
+}
 .course-owner-title{
     font-size:0.9em;
     font-weight: 400;
+}
+.link{
+    cursor: pointer;
 }
 .right-section .buttons h6{
     font-size:0.9em;
@@ -13,5 +23,5 @@
 color:$link;
 }
 *{
-    color:white;
+    color:$black;
 }

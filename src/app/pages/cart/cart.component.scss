@@ -1,8 +1,15 @@
 @import "./responsive.scss";
-*{
-  color:white;
+@import "global";
+* {
+  color: white;
 }
-
+.empty-cart-img {
+  width: 300px;
+}
+.cart__title {
+  color: $black;
+  font-size:var(--fs-xxxl)
+}
 .cards-wrapper {
   display: flex;
   justify-content: center;
@@ -11,8 +18,8 @@
   max-width: 100%;
   max-height: 100%;
 }
-.cart-container{
-  margin-top: 10em;
+.cart-container {
+  margin-top: 5em;
 }
 .card {
   margin: 0 0.5em;

@@ -1,0 +1,32 @@
+@import "global";
+@import "./responsive.scss";
+.section__heading{
+    font-size:var(--fs-lg);
+   
+}
+.stat__number{
+    font-size: var(--fs-xxl);
+}
+
+.stat__image{
+    width:150px;
+    height:130px;
+}
+.stat__number-plus{
+    color:$secondary;
+}
+.stats-row{
+    margin-top: var(--rowgap-2xl);
+}
+.stat__text{
+    margin-top:var(--rowgap-lg);
+    font-weight: 700;
+    font-size: var(--fs-sm);
+}
+.stat__description{
+    max-width:500px;
+    margin-top: var(--rowgap-lg);
+    font-size: var(--fs--sm);
+    opacity: 0.8;
+    text-align: center;
+}

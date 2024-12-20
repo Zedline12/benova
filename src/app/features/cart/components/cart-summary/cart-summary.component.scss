@@ -1,15 +1,26 @@
 @import "global";
 .checkout-btn {
   background-color: $secondary;
-  color: white;
+  color: $black;
   padding: 10px 10px 10px 10px;
   border: none;
+  margin-top:var(--rowgap-xl)
+}
+.summary__title{
+  font-size:var(--fs-md)
+}
+.summary__total{
+  font-size: var(--fs-lg);
 }
 .promotions input {
   padding: 5px;
   width:100%;
 }
 .promotions button{
-  color:white;
+  color:$black;
   border:none;
+}
+
+*{
+  color:$black;
 }

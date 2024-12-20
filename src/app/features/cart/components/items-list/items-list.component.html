@@ -1,54 +1,60 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-12 p-0 bold">
-      <h6 class="bold">1 Course In Cart</h6>
+    <div class="col-12 p-0">
+      <h6 class="cart__subheading">{{ cartCourses.length }} Course In Cart</h6>
     </div>
     <hr />
-    <div class="row p-0 m-0">
-        @for (course of cartCourses;track course._id) {
-            <div class="col-12 mt-5">
-                <div class="row">
-                  <div class="col-2 p-0 order-1">
-                    <img class="course-image" src="{{course.image}}" />
+    <div class="row cart__items-row p-0 m-0">
+      @for (course of cartCourses; track course._id) {
+        <div class="col-12 mt-5">
+          <div class="row">
+            <div class="col-2 p-0 order-1">
+              <img class="course-image" src="{{ course.thumbnailLink }}" />
+            </div>
+            <div class="col-7 order-2">
+              <div class="row">
+                <div class="col-12">
+                  <h6 class="course-title">
+                    {{ course.title }}
+                  </h6>
+                </div>
+                <div class="col-12">
+                  <h6 class="course-owner-title">{{ course.author.firstName }} {{ course.author.lastName }}</h6>
+                </div>
+                <div class="col-12">
+                  <course-rating></course-rating>
+                </div>
+              </div>
+            </div>
+
+            <div class="right-section col-lg-3 order-5 p-0">
+              <div class="row d-flex justify-content-end">
+                <div class="col-lg-6 col-sm-10 col-8 buttons p-0">
+                  <div class="d-flex flex-column">
+                    <h6
+                      (click)="removeFromCart(course._id)"
+                      class="text-end mb-3 link"
+                    >
+                      Remove
+                    </h6>
+                    <h6 class="text-end link">Save For Later</h6>
                   </div>
-                  <div class="col-7 order-2">
-                    <div class="row">
-                      <div class="col-12">
-                        <h6 class="bold">
-                          {{course.title}}
-                        </h6>
-                      </div>
-                      <div class="col-12">
-                        <h6 class="course-owner-title">{{course.author}}</h6>
-                      </div>
-                      <div class="col-12">
-                        <course-rating></course-rating>
-                      </div>
-                    </div>
-                  </div>
-        
-                  <div class="right-section col-lg-3  order-5 p-0">
-                    <div class="row d-flex justify-content-end">
-                      <div class="col-lg-6 col-sm-10 col-8 buttons p-0">
-                        <div class="d-flex flex-column">
-                          <h6 (click)="removeFromCart(course._id)" class="text-end mb-3 link">Remove</h6>
-                          <h6 class="text-end link">Save For Later</h6>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-sm-2 col-4 d-flex justify-content-end ps-0">
-                        <div class="d-flex flex-column">
-                          <h6>{{course.price}}<i class="bi bi-tag-fill"></i></h6>
-                          @if (course.oldPrice) {
-                            <h6 class="discount">{{course.oldPrice}}$</h6>   
-                          }
-                        </div>
-                      </div>
-                    </div>
+                </div>
+                <div
+                  class="col-lg-6 col-sm-2 col-4 d-flex justify-content-end ps-0"
+                >
+                  <div class="d-flex flex-column">
+                    <h6>{{ course.price }}<i class="bi bi-tag-fill"></i></h6>
+                    @if (course.oldPrice) {
+                      <h6 class="discount">{{ course.oldPrice }}$</h6>
+                    }
                   </div>
                 </div>
               </div>
-        }
-  
+            </div>
+          </div>
+        </div>
+      }
     </div>
   </div>
 </div>

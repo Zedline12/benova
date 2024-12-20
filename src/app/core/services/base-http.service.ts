@@ -4,14 +4,13 @@ import { Observable } from 'rxjs';
 @Injectable({ providedIn: 'root' })
 export class baseHttpService {
   constructor(private readonly http: HttpClient) {}
-  private readonly baseUrl: string =
-    'https://benovabackend-production.up.railway.app';
+  private readonly baseUrl: string = 'http://localhost:3000';
 
   get<T>(url: string): Observable<T> {
     return this.http.get<T>(this.baseUrl + url);
   }
 
   post<T>(url: string, body: any) {
-    this.http.post(this.baseUrl + url, body);
+    return this.http.post(this.baseUrl + url, body);
   }
 }

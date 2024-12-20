@@ -1,0 +1,5 @@
+@media (max-width: 996px) {
+  .section__stat:not(.section__stat:first-child) {
+    margin-top: var(--rowgap-3xl);
+  }
+}

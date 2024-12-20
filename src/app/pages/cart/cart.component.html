@@ -3,8 +3,8 @@
     @if(coursesService.getCartCoursesService().length) {
     <div class="row d-flex justify-content-xxl-center justify-content-start">
      
-      <div class="col-12 mb-4">
-        <h1 class="m-0">Shopping Cart</h1>
+      <div class="col-12 ">
+        <h1 class="cart__title">Shopping Cart</h1>
       </div>
      
         <div class="col-xxl-8 order-xxl-0 order-1">
@@ -18,7 +18,13 @@
       @else{
         <div class="row d-flex align-items-end justify-content-center">
           <div class="col-12 d-flex align-items-center justify-content-center">
-            <h1 class="text-center">Your cart is empty</h1>
+            <img class="empty-cart-img" src="assets/images/empty-cart.png"/>
+          </div>
+          <div class="col-12 d-flex align-items-center justify-content-center mt-5">
+            <h1>Your Cart is Empty</h1>
+          </div>
+          <div class="col-12 d-flex align-items-center justify-content-center mt-3">
+            <h6 style="font-weight: 100;">Looks like you haven`t added any courses yet</h6>
           </div>
         </div>
       }

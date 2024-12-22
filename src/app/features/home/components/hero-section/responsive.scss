@@ -1,9 +1,22 @@
+@media(max-width:400px){
+  .hero-header{
+    // font-size: var(--fs-xxxl) !important;
+  }
+}
 @media (max-width: 576px) {
   .information__column:nth-child(2) {
     border: none !important;
   }
   .information__column {
     padding: 10px !important;
+  }
+}
+@media(max-width:768px){
+  .hero__form {
+    margin-top: var(--rowgap-3xl) !important;
+  }
+  .left-section{
+    padding-right:0px !important;
   }
 }
 @media (max-width: 986px) {

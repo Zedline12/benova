@@ -12,25 +12,48 @@
     -webkit-filter: blur(3px);
   }
 }
+// .left-section {
+//   padding-right: 8em;
+//   padding-left: 0;
+// }
+* {
+  color: white;
+}
+.right-section {
+  background-image: linear-gradient(rgba(230, 0, 0, 0), 60%, rgb(10, 10, 10)),
+    url("/assets/images/hero_robot.png");
+  background-size: cover;
+  height: 500px;
+}
 .hero__content-row {
 }
+.hero {
+
+}
+.section__input{
+  background-color: rgb(228, 228, 228);
+}
 .button {
-  background-color: transparent;
+  background-color: rgb(228, 228, 228);
+}
+.button i{
+  color:black;
 }
 .hero-header {
-  font-size: var(--fs-xxxl);
+  font-size: var(--fs-xxxxl);
   letter-spacing: -2px;
-  color: $black;
+  line-height: 1.2;
   word-spacing: 0.1em;
   font-family: "Roboto Slab", serif;
 }
 .hero__subheading {
-  font-size: var(--fs-sm);
+  font-size: var(--fs--base);
   font-weight: 400;
-  margin-top: var(--rowgap-sm);
+  opacity: 0.7;
+  margin-top: var(--rowgap-xs);
 }
 .hero__form {
-  margin-top: var(--rowgap-2xl);
+  margin-top: var(--rowgap-xl);
 }
 .hero__image {
   width: 90%;
@@ -38,12 +61,11 @@
 }
 /*hero information component*/
 .hero__information-row {
-  margin-top: var(--rowgap-3xl);
+  margin-top: var(--rowgap-4xl);
 }
 .information__number {
   font-size: var(--fs-lg);
   font-family: "Roboto Slab", serif;
-  color: $black;
 }
 .information__text {
   font-size: var(--fs--base);
@@ -60,17 +82,12 @@
 }
 /**/
 
-h1 {
-}
-h5 {
-  opacity: 0.8;
-}
-.header-span-1 {
+.header__span-1 {
   background-image: linear-gradient(pink, #9d00ff);
   color: transparent;
   background-clip: text;
 }
-.header-span-2 {
+.header__span-2 {
   background-image: linear-gradient(pink, #f200ff);
   color: transparent;
   background-clip: text;
@@ -97,7 +114,6 @@ h5 {
   z-index: 100;
   max-height: 30rem;
   overflow-y: scroll;
-  color: black;
 }
 .searchResultsContainer .row {
   cursor: pointer;
@@ -137,8 +153,3 @@ form:focus-within {
   outline: 1px solid blue;
 }
 
-button {
-  /* Just a little styling to make it pretty */
-  border: 1px solid blue;
-  background: blue;
-}

@@ -1,14 +1,57 @@
 @import "global";
 @import "responsive";
 * {
-  color: $black;
+  color: white;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .main-container {
+    margin: 0px 16px !important;
+  }
+}
+@media (min-width: 480px) and (max-width: 700px) {
+  .main-container {
+    margin: 0px 24px !important;
+  }
+}
+@media (min-width: 701px) and (max-width: 1024px) {
+  .main-container {
+    margin: 0px 32px !important;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .main-container {
+    margin: 0px 80px !important;
+  }
+}
+@media (min-width: 1440px) {
+  .main-container {
+    margin: 0px 96px !important;
+  }
+}
+.main-container {
+  width: 1200px;
+}
+
+.header-section {
+  background-color:hsla(0,0%,5%,1);
+  --_mesh-gradient-blur: 100px;
+  background-image:
+  radial-gradient(at 68% 82%, hsla(223,0%,6%,1) 0px, transparent 50%),
+  radial-gradient(at 42% 22%, hsla(26,0%,6%,1) 0px, transparent 50%),
+  radial-gradient(at 46% 63%, hsla(189,0%,8%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 50%, hsla(355,0%,8%,1) 0px, transparent 50%),
+  radial-gradient(at 100% 54%, hsla(281,100%,50%,0.84) 0px, transparent 50%),
+  radial-gradient(at 0% 100%, hsla(289,0%,6%,0.47) 0px, transparent 50%),
+  radial-gradient(at 0% 0%, hsla(289,100%,50%,0.95) 0px, transparent 50%);
 }
 /*Courses Section*/
 /**/
 .courses-section {
   margin-top: var(--rowgap-5xl);
 }
-
+.bi-star-fill {
+  color: gold;
+}
 .courses-section__subheading {
   max-width: 80%;
   font-size: var(--fs-sm);
@@ -26,6 +69,7 @@
   padding: 8px 16px;
   margin: 0px var(--columnpadding-xl);
   background-color: white;
+  color: $black;
   border: 1px solid $black;
   font-weight: 600;
 }
@@ -53,6 +97,7 @@
 .course__title {
   font-weight: bold;
   font-size: var(--fs--base);
+  color: $black;
 }
 .more-details-btn {
   background-color: white;

@@ -23,11 +23,6 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('toTopBtn') toTopBtnEL!: ElementRef<HTMLElement>;
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);
-    this.smoother = ScrollSmoother.create({
-      content: '#smooth-content',
-      wrapper: 'app-root',
-      smooth: 2,
-    });
   }
 
   @HostListener('window:scroll')

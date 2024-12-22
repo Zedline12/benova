@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import CoursesService from '../../core/services/courses.service';
 import Lenis from 'lenis';
+import { TimelineLite,gsap } from 'gsap';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,23 +10,12 @@ import Lenis from 'lenis';
 })
 export class HomeComponent implements OnInit {
   constructor(public coursesService: CoursesService) {}
-
+  animationsInit() {
+    const tl = new TimelineLite({});
+    tl.from(".header-section",1,{delay:3.5,backgroundImage:"radial-gradient(at 68% 82%, hsla(223,0%,6%,1) 0px, transparent 50%),radial-gradient(at 42% 22%, hsla(26,0%,6%,1) 0px, transparent 50%),radial-gradient(at 46% 63%, hsla(189,0%,8%,1) 0px, transparent 50%),radial-gradient(at 0% 50%, hsla(355,0%,8%,1) 0px, transparent 50%),radial-gradient(at 100% 54%, hsla(289,0%,6%,0.47) 0px, transparent 50%),radial-gradient(at 0% 100%, hsla(289,0%,6%,0.47) 0px, transparent 50%),radial-gradient(at 0% 0%, hsla(289,0%,6%,0.47) 0px, transparent 50%)"});
+  }
   ngOnInit(): void {
-    const lenis = new Lenis({
-      autoRaf: true,
-    });
-    lenis.on('scroll', ScrollTrigger.update);
-
-// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
-// This ensures Lenis's smooth scroll animation updates on each GSAP tick
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
-});
-
-// Disable lag smoothing in GSAP to prevent any delay in scroll animations
-gsap.ticker.lagSmoothing(0);
-    
+    this.animationsInit()
     this.coursesService.getCoursesService();
-    this.coursesService.courses$.subscribe((x) => {});
   }
 }

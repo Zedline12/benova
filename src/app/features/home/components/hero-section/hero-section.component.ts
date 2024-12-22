@@ -52,7 +52,7 @@ export class HeroSectionComponent implements OnInit {
       delay: 1,
 
       opacity: 0.3,
-      '-webkit-filter': 'blur(15px)',
+      '-webkit-filter': 'blur(25px)',
     });
     tl.to('.hero-header', 0.5, {
       opacity: 1,
@@ -61,30 +61,30 @@ export class HeroSectionComponent implements OnInit {
     tl.fromTo(
       '.hero__subheading',
       0.5,
-      { opacity: 0.3, '-webkit-filter': 'blur(15px)' },
+      { opacity: 0.3, '-webkit-filter': 'blur(25px)' },
       { opacity: 1, '-webkit-filter': 'blur(0px)' },
     );
     tl.fromTo(
       '.hero__form',
       0.5,
-      { opacity: 0.3, '-webkit-filter': 'blur(15px)' },
+      { opacity: 0.3, '-webkit-filter': 'blur(25px)' },
       { opacity: 1, '-webkit-filter': 'blur(0px)' },
     );
     tl.fromTo(
       '.hero__information-row',
       0.5,
-      { opacity: 0.3, '-webkit-filter': 'blur(15px)' },
+      { opacity: 0.3, '-webkit-filter': 'blur(25px)' },
       { opacity: 1, '-webkit-filter': 'blur(0px)' },
     );
     tl.fromTo(
-      '.hero__image',
+      '.right-section',
       0.5,
-      { opacity: 0.3, '-webkit-filter': 'blur(15px)' },
+      { opacity: 0.3, '-webkit-filter': 'blur(25px)' },
       { opacity: 1, '-webkit-filter': 'blur(0px)' },
     );
   }
   ngOnInit(): void {
-    this.animationsInit();
+   // this.animationsInit();
   }
 
   @ViewChild('searchInput') searchInput!: ElementRef;

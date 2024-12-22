@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 @import "global";
-* {
-  color: $black;
+*{
+  color:white;
 }
+
 .sticky-nav {
   background-color: white;
   color: black;
   position: sticky !important;
   top: 0px;
-  z-index: 10000;
 }
 /*navbar component*/
 .navbar {
@@ -23,8 +23,13 @@
   padding: 0px var(--columnpadding-xl);
 }
 .navbar__link {
+  cursor: pointer;
   font-size: var(--fs-base);
   padding: var(--columnpadding-xl);
+  transition: 0.2s;
+}
+.navbar__link:hover{
+  color:black;
 }
 .nav-row {
   padding: 30px 0px;
@@ -46,14 +51,14 @@
 .navbar__collapse-row {
   border-top: 1px solid $black;
 }
-.dropdown-item{
-  font-size:var(--fs--sm);
-  padding:20px;
+.dropdown-item {
+  font-size: var(--fs--sm);
+  padding: 20px;
 }
-.navbar__profile-icon{
-  font-size:var(--fs-md);
-  cursor: pointer; 
-  padding-left:var(--columnpadding-2xl)
+.navbar__profile-icon {
+  font-size: var(--fs-md);
+  cursor: pointer;
+  padding-left: var(--columnpadding-2xl);
 }
 .navbar__cart {
   padding-right: var(--columnpadding-5xl);

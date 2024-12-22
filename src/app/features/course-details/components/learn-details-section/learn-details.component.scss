@@ -1,0 +1,20 @@
+.box {
+
+}
+.section__bullets-row{
+  margin-top:var(--rowgap-lg)
+}
+.section__heading{
+  font-size: var(--fs-lg);
+}
+.section__bullet{
+padding:5px 0px;
+}
+.bullet__body {
+  font-size: 0.9em;
+  font-weight: 400;
+  font-size: var(--fs--base);
+}
+.box i {
+  font-size: 1.1em;
+}

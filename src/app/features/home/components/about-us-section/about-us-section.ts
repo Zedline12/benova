@@ -13,7 +13,7 @@ export class AboutUsComponent implements OnInit {
         scrub: true,
         pin: true,
         start: 'center center',
-        end: '+=350%',
+        end: '+=250%',
         markers: true,
       },
     });
@@ -79,11 +79,7 @@ export class AboutUsComponent implements OnInit {
         },
         '<',
       )
-      .fromTo(
-        '.section__button',0.5,
-        { left: '-50px' },
-        { left: 0, opacity: 1, position: 'relative' },
-    )
+     
     .to(".slider",{opacity:0},"<")
     //
   }

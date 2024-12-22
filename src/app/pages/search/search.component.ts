@@ -9,11 +9,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
    constructor(public readonly coursesService:CoursesService,private readonly route:ActivatedRoute){}
-   search!:string
+  search!: string
+  searchAll!:boolean
    ngOnInit(): void {
-     this.route.queryParams.subscribe((params)=>{
-      this.search=params["search"]
+     this.route.queryParams.subscribe((params) => {
+       if (!params["search"]) { this.coursesService.searchCourses("*");this.searchAll=true}
+       else {
+         this.search=params["search"]
          this.coursesService.searchCourses(this.search)
+         this.searchAll=false
+       }
      })
    }
 }

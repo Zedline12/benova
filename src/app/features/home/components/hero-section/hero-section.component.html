@@ -1,14 +1,13 @@
-<div class="container-fluid hero">
+<div class="container-fluid  hero ">
   <div
-    class="hero__content-row row d-flex justify-content-start align-items-center"
+    class="hero__content-row row d-flex justify-content-start align-items-center "
   >
-    <div class="col-md-7">
+    <div class="left-section col-md-8" >
       <div class="row">
-        <h1 class="hero-header">
-          Learn New <span class="header-span-1">Generative</span>
-          <span class="header-span-2"> AI</span> Skills Online
+        <h1 class="hero-header text-md-start text-center">
+          Deep Learning, Powering the Future
         </h1>
-        <h2 class="hero__subheading">
+        <h2 class="hero__subheading text-md-start text-center">
           Master the Future of Technology with the World's Best AI Educators –
           Your Journey to Success Starts Here!
         </h2>
@@ -25,7 +24,7 @@
             <input
               #searchInput
               style="width: 100%"
-              class="searchInp p-3"
+              class="section__input p-3"
               placeholder="what do you want to learn?"
               (input)="searchCourses(searchInput.value)"
             />
@@ -39,7 +38,7 @@
             >
               <div class="row mt-3 mb-3">
                 <div class="col-12">
-                  <h5 class="bold">
+                  <h5>
                     {{ (coursesService.searchCourses$ | async)!.length }}
                     Results for '{{ searchInput.value }}'
                   </h5>
@@ -83,34 +82,36 @@
             </div>
           </form>
         </div>
+        <div class="hero__information-row row d-md-block d-none">
+          <div class="d-flex flex-row">
+            <div class="information__column">
+              <div class="d-flex flex-column d-flex justify-content-start">
+                <p class="information__number">+10,000</p>
+                <p class="information__text">Educators</p>
+              </div>
+            </div>
+            <div class="information__column">
+              <div class="d-flex flex-column">
+                <p class="information__number">+100,000</p>
+                <p class="information__text">Students</p>
+              </div>
+            </div>
+            <div class="information__column">
+              <div class="d-flex flex-column">
+                <p class="information__number">+5,000</p>
+                <p class="information__text">AI Courses</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-5 d-md-block d-none">
-      <div class="row d-flex justify-content-end">
-        <img class="hero__image" src="assets/images/hero_img.png" />
-      </div>
+    <div class=" col-4 d-md-block d-none">
+      .
+      <!-- <div class="row d-flex justify-content-end">
+     <img class="hero__image" src="assets/images/hero_robot.png" />
+      </div> -->
     </div>
   </div>
-  <div class="hero__information-row row d-md-block d-none">
-    <div class="d-flex flex-row">
-      <div class="information__column">
-        <div class="d-flex flex-column d-flex justify-content-start">
-          <p class="information__number">+10,000</p>
-          <p class="information__text">Educators</p>
-        </div>
-      </div>
-      <div class="information__column">
-        <div class="d-flex flex-column">
-          <p class="information__number">+100,000</p>
-          <p class="information__text">Students</p>
-        </div>
-      </div>
-      <div class="information__column">
-        <div class="d-flex flex-column">
-          <p class="information__number">+5,000</p>
-          <p class="information__text">AI Courses</p>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
 </div>

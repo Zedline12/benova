@@ -45,9 +45,10 @@ class CoursesService {
   searchCourses(keywords: string) {
     if (!keywords.length) return this.searchCourses$.next([]);
     this.http
-      .get<ICourse[]>(`/courses/search/${keywords}`)
+      .get<any>(`${enviroment.apiUrl}/courses/search/${keywords}`)
       .subscribe((results) => {
-        this.searchCourses$.next(results);
+        console.log(results)
+        this.searchCourses$.next(results.data);
       });
   }
   addToCartService(courseId: string) {

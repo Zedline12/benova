@@ -20,16 +20,18 @@ const watch = () =>
   import('./features/watch/watch.module').then((m) => m.WatchModule);
 const routes: Routes = [
   {
+   
+      loadChildren: home,
+      path: '',
+    
+  },
+  {
     component: MainLayoutComponent,
     path: '',
     children: [
       {
         path: 'payment-success/:id',
         component: PaymentSuccessComponent,
-      },
-      {
-        loadChildren: home,
-        path: '',
       },
       {
         loadChildren: cart,

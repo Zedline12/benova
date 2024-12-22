@@ -1,0 +1,19 @@
+@import "global";
+.description--faded {
+  -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+  max-height: 40vh;
+}
+.section__heading{
+  font-size: var(--fs-lg);
+}
+.section__description{
+  margin-top:var(--rowgap-md);
+  font-size:var(--fs--base)
+}
+.description-content{
+  line-height: 1.5;
+}
+.description-readMore{
+    color:purple;
+    margin-top: 0.5em;
+}

@@ -6,9 +6,9 @@ import { CourseDetailsComponent } from '../../pages/course-details/course-detail
 import { DetailsContainerComponent } from './components/details-container/details-container.component';
 import { SharedModule } from '../../shared/shared.module';
 import { LayoutsModule } from '../../layouts/layouts.module';
-import { LearnDetailsComponent } from './components/learn-details/learn-details.component';
-import { DescriptionComponent } from './components/description/description.component';
-import { CourseContentComponent } from './components/course-content/course-content.component';
+import { LearnDetailsComponent } from './components/learn-details-section/learn-details.component';
+import { DescriptionComponent } from './components/description-section/description.component';
+import { CourseContentComponent } from './components/course-content-section/course-content.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';

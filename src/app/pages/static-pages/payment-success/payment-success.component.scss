@@ -1,15 +1,17 @@
 @import "global";
+*{
+  color:white;
+}
 .container {
   
   
 }
 .title {
   font-size: var(--fs-xxxl);
-  color: $black;
 }
 .title__icon {
   color: limegreen;
-  margin-left: var(--columnpadding-l);
+  margin-left: var(--columnpadding-3xl);
 }
 .order__info-row{
   margin-top:var(--rowgap-2xl)

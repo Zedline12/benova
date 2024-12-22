@@ -9,6 +9,7 @@ import { AboutUsComponent } from './components/about-us-section/about-us-section
 import { StudentsRatingComponent } from './components/students-rating-section/students-rating-section';
 import { WhyUsComponent } from './components/why-us-section/why-us-section.component';
 import { LearnBetterWithUsSectionComponent } from './components/learn-better-with-us-section/learn-better-with-us-section.component';
+import { CoreModule } from '../../core/core.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LearnBetterWithUsSectionComponent } from './components/learn-better-wit
     WhyUsComponent,
     LearnBetterWithUsSectionComponent,
   ],
-  imports: [LayoutsModule, HomeRoutingModule, SharedModule, CommonModule],
+  imports: [HomeRoutingModule, SharedModule, CommonModule, CoreModule],
   providers: [],
+  exports: [HeroSectionComponent],
 })
 export class HomeModule {}

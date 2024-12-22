@@ -1,9 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 @import "global";
-*{
-  color:white;
+* {
+  color: white;
 }
 
+.navbar__link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar__link:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar__link::after {
+  transform-origin: bottom right;
+}
+
+.navbar__link:hover::after {
+  transform-origin: bottom left;
+}
 .sticky-nav {
   background-color: white;
   color: black;
@@ -24,12 +47,10 @@
 }
 .navbar__link {
   cursor: pointer;
+  position: relative;
   font-size: var(--fs-base);
   padding: var(--columnpadding-xl);
   transition: 0.2s;
-}
-.navbar__link:hover{
-  color:black;
 }
 .nav-row {
   padding: 30px 0px;

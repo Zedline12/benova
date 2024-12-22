@@ -88,7 +88,7 @@ export class NavbarComponent implements OnInit {
   }
   ngOnInit(): void {
     this.isLoggedIn=this.authService.isLoggedIn()
-    this.navbarAnimationInit();
+  //  this.navbarAnimationInit();
     this.router.events.subscribe((route: Event) => {
       if (this.router.url === '/') {
         this.isHomePage = true;

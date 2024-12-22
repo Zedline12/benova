@@ -16,7 +16,7 @@
       <div class="navbar__links-row dropdown d-md-none d-sm-block d-none">
         <h5 data-bs-toggle="dropdown">Links</h5>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item " href="#">Browse Courses</a></li>
+          <li><a class="dropdown-item" href="#">Browse Courses</a></li>
           <li><a class="dropdown-item" href="#">About us</a></li>
           <li><a class="dropdown-item" href="#">Contact Us</a></li>
         </ul>
@@ -35,18 +35,30 @@
           >{{ coursesService.getCartCoursesService().length }}</span
         ></a
       >
-     
+
       <div class="dropdown">
         <i
-        *ngIf="isLoggedIn"
-        class="navbar__profile-icon bi bi-person-circle"
-        data-bs-toggle="dropdown"
-      ></i>
-      
+          *ngIf="isLoggedIn"
+          class="navbar__profile-icon bi bi-person-circle"
+          data-bs-toggle="dropdown"
+        ></i>
+
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#"><i class="bi bi-gear-wide me-2"></i>Settings</a></li>
-          <li><a class="dropdown-item" href="#"><i class="bi bi-list me-1"></i> My Courses</a></li>
-          <li><a class="dropdown-item" (click)="logOut()"><i class="bi bi-door-open-fill me-2"></i>Log Out</a></li>
+          <li>
+            <a class="dropdown-item" href="#"
+              ><i class="bi bi-gear-wide me-2"></i>Settings</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"
+              ><i class="bi bi-list me-1"></i> My Courses</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="logOut()"
+              ><i class="bi bi-door-open-fill me-2"></i>Log Out</a
+            >
+          </li>
         </ul>
       </div>
       <button
@@ -69,9 +81,9 @@
     </div>
   </div>
 </div>
-<div class="row navbar__collapse-row collapse navbar-collapse" id="navbarNav">
-  <div class="d-flex flex-row justify-content-between pt-3">
-    <div>
+<div class="row navbar__collapse-row collapse navbar-collapse mb-5" id="navbarNav">
+  <div class="d-flex flex-sm-row flex-column justify-content-sm-between pt-3">
+    <div class="order-sm-1 order-2">
       <div class="d-flex flex-column">
         <h5 class="navbar__link">Browse Courses</h5>
 
@@ -80,30 +92,29 @@
         <h5 class="navbar__link">Conatct Us</h5>
       </div>
     </div>
-    <div>
+    <div class="order-sm-2 order-1 d-sm-block d-flex justify-content-end">
       <a
         class="nav-item"
         style="position: relative; color: inherit"
         [routerLink]="['/cart']"
       >
-        <i class="navbar__cart bi bi-cart2"></i
-        >
+        <i class="navbar__cart bi bi-cart2"></i>
         <span
-          style="position: absolute; top: -20px; left: 9px; font-weight: bold"
+          style="position: absolute; top: -15px; left: 9px; font-weight: bold"
           >{{ coursesService.getCartCoursesService().length }}</span
         ></a
       >
       <i
-      *ngIf="isLoggedIn"
-      class="navbar__profile-icon bi bi-person-circle"
-    ></i>
-    <button
-      *ngIf="!isLoggedIn"
-      [routerLink]="['/auth/signup']"
-      class="navbar__button"
-    >
-      SignUp
-    </button>
+        *ngIf="isLoggedIn"
+        class="navbar__profile-icon bi bi-person-circle"
+      ></i>
+      <button
+        *ngIf="!isLoggedIn"
+        [routerLink]="['/auth/signup']"
+        class="navbar__button"
+      >
+        SignUp
+      </button>
     </div>
   </div>
 </div>

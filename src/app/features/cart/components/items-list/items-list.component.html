@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-12 p-0">
-      <h6 class="cart__subheading">{{ cartCourses.length }} Course In Cart</h6>
+    <div class="col-12 p-0 mb-3">
+      <h6 class="cart__subheading">{{ cartCourses.length }} Course(s) In Cart</h6>
     </div>
     <hr />
-    <div class="row cart__items-row p-0 m-0">
+    <div class="row cart__items-row p-0 m-0 mt-3">
       @for (course of cartCourses; track course._id) {
-        <div class="col-12 mt-5">
+        <div class="col-12 cart__item">
           <div class="row">
             <div class="col-2 p-0 order-1">
               <img class="course-image" src="{{ course.thumbnailLink }}" />

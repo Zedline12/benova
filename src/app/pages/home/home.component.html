@@ -57,7 +57,7 @@
                   id="{{ 'slide' + (index + 1) }}"
                 >
                   <div style="position: relative" class="container-fluid">
-                    <div class="row">
+                    <div class="row bg-dark">
                       <div class="col-12 bg-dark p-0">
                         <img
                           class="course-image"
@@ -68,16 +68,16 @@
                         <p class="course__title">{{ course.title }}</p>
                       </div>
                       <div class="col-12 mt-1">
-                        <p style="color: black">{{ course.author.firstName }}</p>
+                        <p >{{ course.author.firstName }} {{course.author.lastName}}</p>
                       </div>
                       <div class="col-12 mt-2">
-                        <h6 style="color: black">
+                        <h6>
                           4.6 <i class="bi bi-star-fill"></i>
                           <i class="bi bi-star-fill"></i>
                           <i class="bi bi-star-fill"></i>
                           <i class="bi bi-star-fill"></i>
                           <i class="bi bi-star-fill"></i>
-                          <span style="color: black" class="ms-3">(134,893)</span>
+                          <span class="ms-3">(134,893)</span>
                         </h6>
                       </div>
                       <div class="col-12 d-flex justify-content-center mt-4 mb-4">

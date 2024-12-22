@@ -1,6 +1,6 @@
 @import "global";
 * {
-  color: $black;
+  color: white;
 }
 .heading{
     font-size:var(--fs-xxxl)
@@ -11,17 +11,19 @@
 .cards-row{
     margin-top:var(--rowgap-3xl)
 }
+.card__name{
+    font-size: var(--fs--base);
+    font-weight: 500;
+}
 .card {
-    height:200px;
+    min-height:200px;
     max-width:400px;
 }
 @media(max-width:400px){
     .card{
         height:250px;
     }
-    .card-body{
-        padding:0px;
-    }
+   
 }
 .card-profilePic {
   width: 3rem;

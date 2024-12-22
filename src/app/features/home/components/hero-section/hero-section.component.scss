@@ -31,6 +31,7 @@
 
 }
 .section__input{
+  color:$black;
   background-color: rgb(228, 228, 228);
 }
 .button {
@@ -108,20 +109,24 @@
 .courseSearchImage {
   width: 100px;
 }
-.searchResultsContainer {
+.hero__search {
   position: absolute;
   top: 100%;
-  z-index: 100;
+  z-index: 1000;
   max-height: 30rem;
   overflow-y: scroll;
 }
-.searchResultsContainer .row {
+.hero__search .row {
   cursor: pointer;
   transition: 0.2s;
 }
-.searchResultsContainer .row:hover {
+.search__title,.search__header,.search__title,.search__price{
+  color:$black;
+}
+.hero__search .row:hover {
   background-color: whitesmoke;
 }
+
 form {
   /* This bit sets up the horizontal layout */
   display: flex;

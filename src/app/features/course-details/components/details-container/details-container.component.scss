@@ -10,7 +10,8 @@
   font-size: var(--fs-lg);
 }
 .course__price{
-  font-size: var(--fs-xl);
+  font-weight: 600;
+  font-size: var(--fs-xxl);
   color:$black;
 }
 .enter-coupon{
@@ -20,7 +21,7 @@
   background-color: $secondary;
   padding:8px 16px;
   font-weight: 500;
-  font-size: var(--fs--xs);
+  font-size: var(--fs--sm);
 }
 .bi-star-fill , .bi-star-half{
 color:gold;
@@ -30,8 +31,9 @@ color:gold;
   font-weight: 400;
 }
 .apply-button {
-  background-color: black;
-  padding: 5px;
+  background-color: $black;
+  font-weight: 500;
+  padding: 8px 16px;
   font-size: 0.9rem;
 }
 .right-section {
@@ -53,7 +55,7 @@ color:gold;
   font-size: 0.9em;
   font-weight: 700;
 }
-.course-image {
+.course__image {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

@@ -10,7 +10,8 @@
   font-size:var(--fs-md)
 }
 .summary__total{
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xxl);
+  font-weight: 500;
 }
 .promotions input {
   padding: 5px;
@@ -19,6 +20,7 @@
 .promotions button{
   color:white;
   background-color: $black;
+  padding:8px 16px;
   border:none;
 }
 

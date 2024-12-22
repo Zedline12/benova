@@ -19,7 +19,7 @@
           <form
             (submit)="onSearchSubmit()"
             class="bg-white p-0 search-form"
-            style="position: relative"
+            style="position: relative;z-index: 99999;"
           >
             <input
               #searchInput
@@ -34,14 +34,14 @@
             <div
               *ngIf="(coursesService.searchCourses$ | async)!.length"
               [@searchResultsToggle]="isSearchResultsOpen ? 'open' : 'closed'"
-              class="searchResultsContainer bg-white container-fluid"
+              class="hero__search bg-white container-fluid"
             >
               <div class="row mt-3 mb-3">
                 <div class="col-12">
-                  <h5>
+                  <p class="search__header">
                     {{ (coursesService.searchCourses$ | async)!.length }}
                     Results for '{{ searchInput.value }}'
-                  </h5>
+                  </p>
                 </div>
               </div>
               <hr />
@@ -52,8 +52,10 @@
                 <div
                   [routerLink]="['/courses', course._id]"
                   class="row mt-3 mb-3"
+                  style="z-index:99999 !important;"
                 >
                   <div
+                  style="z-index:99999 !important;"
                     class="col-sm-3 d-flex justify-content-sm-start justify-content-center"
                   >
                     <img
@@ -63,18 +65,18 @@
                   </div>
                   <div class="col-sm-6 mt-sm-0 mt-3">
                     <div class="flex flex-row">
-                      <h6 class="courseSearchTitle">{{ course.title }}</h6>
+                      <p class="search__title">{{ course.title }}</p>
                     </div>
                   </div>
                   <div class="col-sm-3 bold">
                     <div class="flex flex-column">
-                      <h6 class="courseSearchPrice">{{ course.price }}$</h6>
-                      <h6
-                        class="courseSearchPrice discount"
+                      <p class="search__price">{{ course.price }}$</p>
+                      <p
+                        class="search__price search__price--discount"
                         *ngIf="course.oldPrice"
                       >
                         {{ course.oldPrice }}
-                      </h6>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -82,7 +84,7 @@
             </div>
           </form>
         </div>
-        <div class="hero__information-row row d-md-block d-none">
+        <div style="z-index:0;" class="hero__information-row row d-md-block d-none">
           <div class="d-flex flex-row">
             <div class="information__column">
               <div class="d-flex flex-column d-flex justify-content-start">

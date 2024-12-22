@@ -84,7 +84,7 @@ export class HeroSectionComponent implements OnInit {
     );
   }
   ngOnInit(): void {
-   // this.animationsInit();
+    this.animationsInit();
   }
 
   @ViewChild('searchInput') searchInput!: ElementRef;

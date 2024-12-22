@@ -38,61 +38,64 @@
             </div>
           </div>
         </div>
-        <div class="col-4 d-lg-block d-none">
-          <section id="slider">
-            <input type="radio" name="slider" id="s1" />
-            <input type="radio" name="slider" id="s2" />
-            <input type="radio" name="slider" id="s3" checked />
-            <input type="radio" name="slider" id="s4" />
-            <input type="radio" name="slider" id="s5" />
-            @for (
-              course of (coursesService.courses$ | async)!.slice(0, 4);
-              track course._id;
-              let index = $index
-            ) {
-              <label
-                class="course-card"
-                for="{{ 's' + (index + 1) }}"
-                id="{{ 'slide' + (index + 1) }}"
-              >
-                <div style="position: relative" class="container-fluid">
-                  <div class="row">
-                    <div class="col-12 bg-dark p-0">
-                      <img
-                        class="course-image"
-                        src="{{ course.thumbnailLink }}"
-                      />
-                    </div>
-                    <div class="col-12 d-flex justify-content-start mt-4">
-                      <p class="course__title">{{ course.title }}</p>
-                    </div>
-                    <div class="col-12 mt-1">
-                      <p style="color: black">{{ course.author.firstName }}</p>
-                    </div>
-                    <div class="col-12 mt-2">
-                      <h6 style="color: black">
-                        4.6 <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <span style="color: black" class="ms-3">(134,893)</span>
-                      </h6>
-                    </div>
-                    <div class="col-12 d-flex justify-content-center mt-4 mb-4">
-                      <button
-                        class="more-details-btn"
-                        [routerLink]="['/courses', course._id]"
-                      >
-                        View Course
-                      </button>
+        @if( (coursesService.courses$ | async)!.length) {
+          <div class="col-4 d-lg-block d-none">
+            <section id="slider">
+              <input type="radio" name="slider" id="s1" />
+              <input type="radio" name="slider" id="s2" />
+              <input type="radio" name="slider" id="s3" checked />
+              <input type="radio" name="slider" id="s4" />
+              <input type="radio" name="slider" id="s5" />
+              @for (
+                course of (coursesService.courses$ | async)!.slice(0, 4);
+                track course._id;
+                let index = $index
+              ) {
+                <label
+                  class="course-card"
+                  for="{{ 's' + (index + 1) }}"
+                  id="{{ 'slide' + (index + 1) }}"
+                >
+                  <div style="position: relative" class="container-fluid">
+                    <div class="row">
+                      <div class="col-12 bg-dark p-0">
+                        <img
+                          class="course-image"
+                          src="{{ course.thumbnailLink }}"
+                        />
+                      </div>
+                      <div class="col-12 d-flex justify-content-start mt-4">
+                        <p class="course__title">{{ course.title }}</p>
+                      </div>
+                      <div class="col-12 mt-1">
+                        <p style="color: black">{{ course.author.firstName }}</p>
+                      </div>
+                      <div class="col-12 mt-2">
+                        <h6 style="color: black">
+                          4.6 <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <span style="color: black" class="ms-3">(134,893)</span>
+                        </h6>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center mt-4 mb-4">
+                        <button
+                          class="more-details-btn"
+                          [routerLink]="['/courses', course._id]"
+                        >
+                          View Course
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </label>
-            }
-          </section>
-        </div>
+                </label>
+              }
+            </section>
+          </div>
+        }
+       
       </div>
       <div class="section d-xl-block d-none">
         <about-us-section></about-us-section>

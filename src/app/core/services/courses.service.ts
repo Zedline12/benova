@@ -23,6 +23,7 @@ class CoursesService {
     ICourse[]
   >([]);
   getCoursesService() {
+    this.courses$.next([])
     this.http
       .get<HttpSuccessResult | any>(`${enviroment.apiUrl}/courses`)
       .subscribe((result: HttpSuccessResult) => {

@@ -14,7 +14,6 @@ export class AboutUsComponent implements OnInit {
         pin: true,
         start: 'center center',
         end: '+=250%',
-        markers: true,
       },
     });
     //first line replacement
@@ -79,8 +78,8 @@ export class AboutUsComponent implements OnInit {
         },
         '<',
       )
-     
-    .to(".slider",{opacity:0},"<")
+
+      .to('.slider', { opacity: 0 }, '<');
     //
   }
 }

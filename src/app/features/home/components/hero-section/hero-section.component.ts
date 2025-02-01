@@ -48,20 +48,29 @@ export class HeroSectionComponent implements OnInit {
 
   animationsInit(): void {
     const tl = new TimelineLite({});
-    tl.from('.hero-header', 0.5, {
+     tl.from('.hero-image', 0.5, {
       delay: 1,
 
       opacity: 0.3,
       '-webkit-filter': 'blur(25px)',
+     });
+     tl.to('.hero-image', 0.5, {
+      opacity: 1,
+      '-webkit-filter': 'blur(0px)',
     });
-    tl.to('.hero-header', 0.5, {
+    tl.from('.hero-header', 0.3, {
+    
+      opacity: 0.3,
+      '-webkit-filter': 'blur(25px)',
+    });
+    tl.to('.hero-header', 0.3, {
       opacity: 1,
       '-webkit-filter': 'blur(0px)',
     });
     tl.fromTo(
       '.hero__subheading',
       0.5,
-      { opacity: 0.3, '-webkit-filter': 'blur(25px)' },
+      {delay:0, opacity: 0.3, '-webkit-filter': 'blur(25px)' },
       { opacity: 1, '-webkit-filter': 'blur(0px)' },
     );
     tl.fromTo(

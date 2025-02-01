@@ -3,13 +3,13 @@ import {
   Component,
   ElementRef,
   HostListener,
-  inject,
   ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
 import ScrollSmoother from 'gsap-trial/dist/ScrollSmoother';
 import ScrollTrigger from 'gsap-trial/dist/ScrollTrigger';
 import { gsap } from 'gsap';
+import Lenis from 'lenis'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -23,6 +23,9 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('toTopBtn') toTopBtnEL!: ElementRef<HTMLElement>;
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);
+    const lenis = new Lenis({ autoRaf: true,smoothWheel: true });
+    ScrollTrigger.refresh()
+    lenis.on('scroll', ScrollTrigger.update)
   }
 
   @HostListener('window:scroll')

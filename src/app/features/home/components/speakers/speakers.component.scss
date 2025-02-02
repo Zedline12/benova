@@ -1,11 +1,12 @@
 .speakers-img{
-   width:700px;
+    width:700px;
    z-index:2
 }
 .speakers-text{
     position: absolute;
     word-spacing: 5;
     font-weight: 700;
+    opacity: 0;
     font-size: var(--fs-xxxxl);
     z-index:1;
 }

@@ -11,14 +11,14 @@ export class SpeakersComponent implements OnInit {
       scrollTrigger: {
         trigger: '.speakers-section',
         start: 'top center',
-        end:'bottom+=600 top ',
+        end:'bottom+=600  ',
         scrub: true,
         markers: true,
         pin:true
       },
     });
-    tl.to(".speakers-img", 2, { width: '1000px' })
-    tl.to('.speakers-text', 2, { delay: 0.5, top: -250 }, "<")
+    tl.to(".speakers-img", 2, { width:'900px'})
+    tl.to('.speakers-text', 2, { delay: 0.5, top: -250,opacity:1 }, "<")
    
     tl.to('.speakers-discount', 4, { delay: 0.5, top: -150,opacity:1 }, "<")
   }

@@ -10,8 +10,7 @@ export class SpeakerSectionComponent implements OnInit {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.speaker-section',
-        start: 'top bottom',
-        end: 'bottom top',
+        
         scrub: true,
         markers: true,
       },

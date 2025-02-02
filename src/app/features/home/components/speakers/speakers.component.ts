@@ -9,7 +9,7 @@ export class SpeakersComponent implements OnInit {
   animationsInit() {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.speakers-section',
+        trigger: '.speakers-row',
         start: 'top center',
        
         scrub: true,

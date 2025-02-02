@@ -32,7 +32,7 @@
         <i class="navbar__cart bi bi-cart2"></i
         ><span
           style="position: absolute; top: -12px; left: 9px; font-weight: bold"
-          >{{ coursesService.getCartCoursesService().length }}</span
+          ></span
         ></a
       >
 
@@ -55,14 +55,14 @@
             >
           </li>
           <li>
-            <a class="dropdown-item" (click)="logOut()"
+            <a class="dropdown-item" 
               ><i class="bi bi-door-open-fill me-2"></i>Log Out</a
             >
           </li>
         </ul>
       </div>
       <button
-        *ngIf="!isLoggedIn"
+      
         [routerLink]="['/auth/signup']"
         class="navbar__button"
       >
@@ -104,15 +104,15 @@
         <i class="navbar__cart bi bi-cart2"></i>
         <span
           style="position: absolute; top: -15px; left: 9px; font-weight: bold"
-          >{{ coursesService.getCartCoursesService().length }}</span
+          ></span
         ></a
       >
       <i
-        *ngIf="isLoggedIn"
+       
         class="navbar__profile-icon bi bi-person-circle"
       ></i>
       <button
-        *ngIf="!isLoggedIn"
+       
         [routerLink]="['/auth/signup']"
         class="navbar__button"
       >

@@ -1,10 +1,12 @@
+<div class="black-out"></div>
 <div class="container-fluid  hero ">
   <div
     class="hero__content-row row d-flex justify-content-center"
   >
-    <div class="left-section col-12" >
+    <div style="position: relative;" class="left-section col-12" >
       <div class="row">
-        <img class="hero-image " src="assets/images/headphone.png"/>
+        <img [routerLink]="['/products',2]" (mouseenter)="imageMouseEnter()" (mouseleave)="imageMouseLeave()" class="hero__image" src="assets/images/headphone2.png"/>
+       
         <h1 class="hero-header text-center">
           Immerse Yourself in Pure Sound.
         </h1>

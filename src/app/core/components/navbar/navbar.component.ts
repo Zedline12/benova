@@ -1,10 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import CoursesService from '../../services/courses.service';
 import { Router, Event } from '@angular/router';
 import { TimelineLite, gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import $ from 'jquery';
-import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'navbar',
   templateUrl: './navbar.component.html',
@@ -15,8 +13,6 @@ export class NavbarComponent implements OnInit {
   public isHomePage!: boolean;
   public isLoggedIn!:boolean
   constructor(
-    public coursesService: CoursesService,
-    public authService: AuthService,
     private router: Router,
   ) {}
   navbarAnimationInit(): void {
@@ -87,7 +83,7 @@ export class NavbarComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    this.isLoggedIn=this.authService.isLoggedIn()
+   
   //  this.navbarAnimationInit();
     this.router.events.subscribe((route: Event) => {
       if (this.router.url === '/') {
@@ -98,7 +94,7 @@ export class NavbarComponent implements OnInit {
     });
   }
   logOut() {
-    this.authService.logOut();
+   
     this.router.navigate(['/']);
   }
 }

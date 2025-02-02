@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import CoursesService from '../../../../core/services/courses.service';
-import { ICourse } from '../../../../core/interfaces/ICourse';
 
 @Component({
   selector: 'items-list',
@@ -8,12 +6,10 @@ import { ICourse } from '../../../../core/interfaces/ICourse';
   styleUrl: './items-list.component.scss',
 })
 export class ItemsListComponent implements OnInit {
-  constructor(private coursesService: CoursesService) {}
-  cartCourses: any[] = [];
+  constructor() {}
   ngOnInit(): void {
-    this.cartCourses = this.coursesService.getCartCoursesService();
   }
   removeFromCart(courseId: string) {
-    this.coursesService.removeFromCartService(courseId);
+  
   }
 }

@@ -1,0 +1,27 @@
+.speakers-img{
+   width:700px;
+   z-index:2
+}
+.speakers-text{
+    position: absolute;
+    word-spacing: 5;
+    font-weight: 700;
+    font-size: var(--fs-xxxxl);
+    z-index:1;
+}
+.speakers-discount{
+    position: absolute;
+   
+    opacity:0;
+    font-weight: 300;
+    font-size: var(--fs-xl);
+    z-index:1;
+}
+.speakers-discount span{
+  font-weight: 700;
+}
+.speakers-text span{
+    background: -webkit-linear-gradient(#ffae00, hsl(32, 100%, 47%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

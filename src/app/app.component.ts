@@ -23,9 +23,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('toTopBtn') toTopBtnEL!: ElementRef<HTMLElement>;
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);
-    const lenis = new Lenis({ autoRaf: true,smoothWheel: true });
-    ScrollTrigger.refresh()
-    lenis.on('scroll', ScrollTrigger.update)
+  
   }
 
   @HostListener('window:scroll')

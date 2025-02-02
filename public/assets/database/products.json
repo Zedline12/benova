@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Premium Speaker",
+    "sku": "WH1000XM4",
+    "price": 349.99,
+    "oldPrice": 399.99,
+    "description": "Elevate your audio experience with our premium speaker, designed for those who demand exceptional sound quality and cutting-edge technology. Featuring rich, deep bass, crystal-clear highs, and immersive 360° surround sound, this speaker delivers an unparalleled listening experience.",
+    "images": [
+      "/assets/images/products/premium-speaker/img1.png",
+      "assets/images/products/premium-speaker/img2.png",
+      "assets/images/products/premium-speaker/img3.png",
+      "assets/images/products/premium-speaker/img4.png"
+    ],
+    "keyFeatures": [
+      "High-Fidelity Sound",
+      "360° Surround Sound",
+      "Advanced Connectivity",
+      "Long-Lasting Battery"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Premium Headphone",
+    "sku": "WH1000XM2",
+    "price": 249.99,
+    "oldPrice": 299.99,
+    "description": "Experience unmatched sound quality with our premium headphones, designed for true audiophiles. Featuring high-fidelity audio, deep bass, and crystal-clear treble, these headphones bring every note to life with stunning clarity.",
+    "images": [
+      "assets/images/products/premium-headphone/img1.png",
+      "assets/images/products/premium-headphone/img2.png",
+      "assets/images/products/premium-headphone/img3.png",
+      "assets/images/products/premium-headphone/img4.png"
+    ],
+    "keyFeatures": [
+      "Industry-leading noise cancellation",
+      "30-hour battery life",
+      "Touch sensor controls",
+      "Speak-to-chat technology"
+    ]
+  }
+]

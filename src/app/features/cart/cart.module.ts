@@ -5,7 +5,6 @@ import { CartRoutingModule } from './cart-routing.module';
 import { ItemsListComponent } from './components/items-list/items-list.component';
 import { CartComponent } from '../../pages/cart/cart.component';
 import { LayoutsModule } from '../../layouts/layouts.module';
-import { SharedModule } from '../../shared/shared.module';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 import { CoreModule } from '../../core/core.module';
 
@@ -20,7 +19,6 @@ import { CoreModule } from '../../core/core.module';
     CommonModule,
     CartRoutingModule,
     LayoutsModule,
-    SharedModule,
     CoreModule
   ]
 })

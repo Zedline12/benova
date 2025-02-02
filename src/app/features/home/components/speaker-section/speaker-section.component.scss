@@ -1,0 +1,32 @@
+@import "global";
+@import "./responsive.scss";
+.speaker-section__heading {
+  font-size: var(--fs-xxxl);
+}
+.speaker-section__subheading {
+  font-size: var(--fs-sm);
+  margin: var(--rowgap-md) 0;
+  font-weight: 100;
+}
+.speaker-section__buttons {
+  margin-top: var(--rowgap-xl);
+}
+.image-container {
+}
+.text-container {
+}
+.speaker-section__image {
+  width: clamp(250px, 50vw, 400px);
+  border-radius: 70px;
+}
+.section__button {
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid rgb(80, 80, 80);
+  color: white;
+  font-size: var(--fs--base);
+}
+.button--primary {
+  background-color: goldenrod;
+  font-weight: 700;
+}

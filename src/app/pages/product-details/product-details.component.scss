@@ -1,0 +1,29 @@
+@import "global";
+* {
+  color: white;
+}
+.btn-primary{
+  background-color: goldenrod;
+  border:none;
+}
+.row{
+  margin:var(--rowgap-4xl) 0px
+}
+.product-image {
+  max-height: 400px;
+  object-fit: cover;
+}
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.image-cover{
+  background-color: rgb(26, 26, 26);
+}
+.thumbnail:hover, .thumbnail.active {
+  opacity: 1;
+}

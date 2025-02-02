@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import gsap from "gsap"
+import gsap from 'gsap';
 @Component({
   selector: 'speakers-section',
   templateUrl: './speakers.component.html',
@@ -10,16 +10,15 @@ export class SpeakersComponent implements OnInit {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.speakers-row',
-        start: 'top center',
-       
+        start: '-400px',
         scrub: true,
-        pin:true
+        pin: true,
       },
     });
-    tl.to(".speakers-img", 2, { width:'900px'})
-    tl.to('.speakers-text', 2, { delay: 0.5, top: -250,opacity:1 }, "<")
-   
-    tl.to('.speakers-discount', 4, { delay: 0.5, top: -150,opacity:1 }, "<")
+    tl.to('.speakers-img', 2, { width: '900px' });
+    tl.to('.speakers-text', 2, { delay: 0.5, top: -250, opacity: 1 }, '<');
+
+    tl.to('.speakers-discount', 4, { delay: 0.5, top: -150, opacity: 1 }, '<');
   }
   ngOnInit(): void {
     this.animationsInit();

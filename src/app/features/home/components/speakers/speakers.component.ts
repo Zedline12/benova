@@ -11,9 +11,8 @@ export class SpeakersComponent implements OnInit {
       scrollTrigger: {
         trigger: '.speakers-section',
         start: 'top center',
-        end:'bottom+=600  ',
+       
         scrub: true,
-        markers: true,
         pin:true
       },
     });

@@ -12,7 +12,6 @@ export class SpeakerSectionComponent implements OnInit {
         trigger: '.speaker-section',
         
         scrub: true,
-        markers: true,
       },
     });
     tl.fromTo(

@@ -12,6 +12,7 @@ export class SpeakersComponent implements OnInit {
         trigger: '.speakers-row',
         start: '-400px',
         scrub: true,
+        markers:true,
         pin: true,
       },
     });
